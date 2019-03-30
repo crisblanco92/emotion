@@ -1,1 +1,27 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><title>form</title><path class="cls-1" d="M224.38,113.27s7.54-6.52.15-13.76-15.71-1.69-16.19-.18c0,0-9.14,8,0,18.8s21.28-.29,21.28-.29,12.79-11.53.28-24.53c-14.42-15-28.26.22-28.26.22s-16,15.92.19,32.09,34.35,3,37,.26c4.79-4.8,19-21.6-.42-42.41C220.33,64,196,75.94,189.72,83.16c-7.77,8.94-23.86,30.3.63,55.69C220.66,170.26,254,139,254,139"/></svg>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
+
+// hacer que sólo gire sobre sí mismo
+
+
+.cls-1{
+  fill:none;
+  stroke:#fff;
+  stroke-miterlimit:10;
+  stroke-width:0.5px;
+
+
+animation: form9 10s infinite linear;
+transform-origin: 50% 50%;
+}
+
+    @keyframes form9 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+
+</style>
+
+
+</defs><title>form</title><path class="cls-1" d="M224.38,113.27s7.54-6.52.15-13.76-15.71-1.69-16.19-.18c0,0-9.14,8,0,18.8s21.28-.29,21.28-.29,12.79-11.53.28-24.53c-14.42-15-28.26.22-28.26.22s-16,15.92.19,32.09,34.35,3,37,.26c4.79-4.8,19-21.6-.42-42.41C220.33,64,196,75.94,189.72,83.16c-7.77,8.94-23.86,30.3.63,55.69C220.66,170.26,254,139,254,139"/></svg>

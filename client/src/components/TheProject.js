@@ -45,7 +45,7 @@ export default function TheProject() {
 
       </article>
       <article className="project-forms">
-        <img src="./" alt=""/>
+        <img src="/client/public/project-forms/" alt=""/>
         
       </article>
       <article className="project-info">

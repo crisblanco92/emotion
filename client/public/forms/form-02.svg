@@ -1,1 +1,24 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><title>form</title><circle class="cls-1" cx="336.36" cy="89.99" r="8.16"/><circle class="cls-1" cx="339.18" cy="118.58" r="6.2"/><line class="cls-1" x1="337.26" y1="97.95" x2="338.89" y2="112.25"/></svg>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
+
+//hacer que gire sobre sí mismo también
+
+
+.cls-1 {
+fill:none;
+stroke:#fff;
+stroke-miterlimit:10;
+stroke-width:0.5px;
+
+
+animation: form2 10s infinite linear;
+transform-origin: 50% 50%;
+    
+ }   
+    @keyframes form2 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+</style>
+
+</defs><title>form</title><circle class="cls-1" cx="336.36" cy="89.99" r="8.16"/><circle class="cls-1" cx="339.18" cy="118.58" r="6.2"/><line class="cls-1" x1="337.26" y1="97.95" x2="338.89" y2="112.25"/></svg>

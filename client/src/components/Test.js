@@ -8,7 +8,7 @@ export default class Test extends Component {
     super()
     
     this.state = {
-      answersGiven : []
+      answersGiven : [],
 
     }
 
@@ -20,7 +20,7 @@ export default class Test extends Component {
 
   getPollas = () => {
     this.service.getAllConceptNames()
-      .then(response => {console.log(response)
+      .then(response => {//console.log(response)
           this.setState(
             {...this.state , response:response}
           )})
@@ -28,26 +28,41 @@ export default class Test extends Component {
 
   }
 
-  componentDidMount() {
+//   componentDidMount() {
 
-    this.service.getAllConceptNames(this.props.match.params.id)
-        .then(response => this.setState({ response: response }))
+//     this.service.getAllConceptNames(this.props.match.params.id)
+//         .then(response => this.setState({ response: response }))
+// }
+
+accumulateAnswers = () => {
+  
 }
 
 
 
-
-
   render() {
-    return (
-      <div>
-        <h1>Test</h1>
-       
 
-            <button>{this.state.response.pairOfConcepts[0].concept1.name}</button>
-            <button>pollas</button>
-    
-      </div>
-    )
+    if (this.state.response) {
+      console.log(this.state.response)
+      return (
+        <div>
+          <h1>Test</h1>
+         
+  
+              <button>{this.state.response[0].pairOfConcepts[0].concept1.name}</button>
+              <button>{this.state.response[0].pairOfConcepts[0].concept2.name}</button>
+
+      
+        </div>
+      )
+    } else {
+
+      return (
+        <div>
+          <h1>loading</h1>
+        </div>
+      )
+
+    }
   }
 }

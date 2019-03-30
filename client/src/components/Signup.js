@@ -1,59 +1,85 @@
 import React, { Component } from 'react'
 	import AuthService from './Auth/AuthService'
 	import { Link } from 'react-router-dom'
+
 	
 	class Signup extends Component {
 	  constructor(props){
 	    super(props)
 	    this.state = { username: '', password: '' }
-	    this.service = new AuthService()
+			this.service = new AuthService()
+
 	  }
 	
 	  handleFormSubmit = (event) => {
 	    event.preventDefault()
 	    const username = this.state.username
-	    const password = this.state.password
-	console.log("juju")
-	    this.service.signup(username, password)
+			const password = this.state.password
+			const age = this.state.age
+			const location = this.state.location
+	//console.log("juju")
+	    this.service.signup(username, password, age, location)
 	    .then( response => {
 	        this.setState({
-	            username: "", 
-	            password: ""
+							username: "", 
+							email: "",
+							password: "",
+							age: "",
+							location: ""
 	        })
 	        this.props.getUser(response)
 	    })
 	    .catch( error => console.log(error) )
-	  }
+		}
+		
 	
 	  handleChange = (event) => {  
-	    const {name, value} = event.target
+			const {name, value} = event.target
+			console.log(name, value, {[name]: value})
 	    this.setState({[name]: value})
-	  }
+		}
+
+	
 	
 	  render(){
 	    return(
-<div className="container">
-                <h1>Formulario de registro</h1>
+<div className="signup-container">
+
+
+                <h1></h1>
                 <div className="row">
                     <div className="col-sm-12">
 												<form onSubmit={this.handleFormSubmit} className="signup-form">
                             <div className="form-group">
-																<label>Username:</label>
-																<input type="text" name="username" value={this.state.username} autoComplete="off" onChange={ e => this.handleChange(e)}/>
+																<label>Email:</label>
+																<input type="text" name="email" className="signup-box" value={this.state.email} autoComplete="off" onChange={ e => this.handleChange(e)}/>
+																<br/><br/> <br/>
 																<label>Password:</label>
-																<input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-											
-																<input type="submit" value="Signup" />
+																<input type="password" name="password" className="signup-box" placeholder="*******" autoComplete="off" value={this.state.password} onChange={ e => this.handleChange(e)} />
+																<br/><br/> <br/>
+																<label>Name:</label>
+																<input type="text" name="username" className="signup-box" placeholder="How you want to be seen" autoComplete="off" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+																<br/><br/> <br/>
+																<label>From:</label>
+																<input type="text" name="location" className="signup-box" placeholder="Where are you from?" value={this.state.location} autoComplete="off" onChange={ e => this.handleChange(e)}/>
+																<br/><br/> <br/>
+																<label>Age:</label>
+																<input type="text" name="age" className="signup-box" value={this.state.age} autoComplete="off" onChange={ e => this.handleChange(e)}/>
+																<br/><br/> <br/>
+
+
+																<input type="submit" value="Sign up" className="btn btn-outline-dark"/>
 														</div>
 												</form>		
 														
 										</div>
 								</div>
 								<div className="form-group">
-									<p>Already have account? 
+									<small>Already have account? 
 											<Link to={"/login"}> Login</Link>
-									</p>
+									</small>
 								</div>
+			
 </div>
 
 

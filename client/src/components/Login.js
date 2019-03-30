@@ -32,19 +32,21 @@ import React, { Component } from 'react'
 	
 	  render(){
 	    return(
-	      <div>
-	        <h1>Log In</h1>
+	      <div className="login-container">
+	        <h1></h1>
+
 	        <form onSubmit={this.handleFormSubmit} className="login-form">
 	          <label>Username:</label>
-	          <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+	          <input type="text" className="login-box" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/> 
+						<br/><br/> <br/>
 	          <label>Password:</label>
-	          <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-	
-	          <input type="submit" value="Login" />
+	          <input type="password" className="login-box" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+						<br/><br/> <br/>
+	          <input type="submit" value="Login" className="btn btn-outline-dark" />
 	        </form>
-	        <p>Don't have account? 
+	        <small>Don't have account? 
 	            <Link to={"/signup"}> Signup</Link>
-	        </p>
+	        </small>
 	      </div>
 	    )
 	  }

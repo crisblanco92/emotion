@@ -51,11 +51,14 @@ app.use(session({
     saveUninitialized: true
 }))
 
-app.use(passport.initialize());
-app.use(passport.session());
+require("./passport")(app);
 
 
 const authRoutes = require('./routes/auth-routes')
 app.use('/api', authRoutes)
+
+const conceptRoutes = require('./routes/concept-routes')
+app.use('/api', conceptRoutes)
+
 
 module.exports = app

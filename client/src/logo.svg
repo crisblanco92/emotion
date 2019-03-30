@@ -5,3 +5,17 @@
         <path d="M520.5 78.1z"/>
     </g>
 </svg>
+
+
+<!-- <svg>
+       <path> transform: rotate(0deg);
+        animation: cris 10s infinite linear;
+        transform-origin: 50% 50%;
+    }
+    
+    @keyframes cris {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}
+    }
+    </path>
+    </svg> -->

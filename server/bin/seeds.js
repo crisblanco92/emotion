@@ -11,7 +11,7 @@ const figures = [
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-01.svg",
         },
         {
             name: "system",
@@ -19,24 +19,24 @@ const figures = [
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-02.svg",
         }
     ],
     [{
-            name: "modern",
+            name: "classic",
             figure: "figure3",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-03.svg",
         },
         {
-            name: "classic",
+            name: "modern",
             figure: "figure4",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-04.svg",
         }
     ],
     [{
@@ -45,7 +45,7 @@ const figures = [
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-05.svg",
         },
         {
             name: "ingrained",
@@ -53,24 +53,24 @@ const figures = [
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-06.svg",
         }
     ],
     [{
-            name: "education",
+            name: "self-leaning",
             figure: "figure7",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-07.svg",
         },
         {
-            name: "self-learning",
+            name: "education",
             figure: "figure8",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-08.svg",
         }
     ],
     [{
@@ -79,7 +79,7 @@ const figures = [
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-09.svg",
         },
         {
             name: "prose",
@@ -87,92 +87,92 @@ const figures = [
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-10.svg",
         }
     ],
     [{
-            name: "to-improvise",
+            name: "joan miró",
             figure: "figure11",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-11.svg",
         },
         {
-            name: "to-plan",
+            name: "rembrandt",
             figure: "figure12",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-12.svg",
         }
     ],
     [{
-            name: "casual",
+            name: "to-improvise",
             figure: "figure13",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-13.svg",
         },
         {
-            name: "formal",
+            name: "to-plan",
             figure: "figure14",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-14.svg",
         }
     ],
     [{
-            name: "baroque",
+            name: "formal",
             figure: "figure15",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-15.svg",
         },
         {
-            name: "minimalist",
+            name: "casual",
             figure: "figure16",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-16.svg",
         }
     ],
     [{
-            name: "theory",
+            name: "baroque",
             figure: "figure17",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-17.svg",
         },
         {
-            name: "practice",
+            name: "minimalist",
             figure: "figure18",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-18.svg",
         }
     ],
     [{
-            name: "rembrandt",
+            name: "practice",
             figure: "figure19",
             concept: "emotional",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-19.svg",
         },
         {
-            name: "joan-miro",
+            name: "theory",
             figure: "figure20",
             concept: "rational",
             center: "",
             speed: "",
-            imageURL: "",
+            imageURL: "/forms/form-20.svg",
         }
     ]
 
@@ -180,13 +180,11 @@ const figures = [
 
 ]
 
-
 mongoose.connect(process.env.MONGODB, { useNewUrlParser: true })
     .then(() => {
         console.log(`Connect to mongo ${process.env.MONGODB}`)
 
         figures.forEach(figuresPair => {
-            // console.log('el par es', figuresPair);
             Concepts.insertMany(figuresPair)
                 .then(insertedObjs => {
                     console.log('figuras añadidas', insertedObjs[0]._id, insertedObjs[1]._id);
@@ -196,19 +194,16 @@ mongoose.connect(process.env.MONGODB, { useNewUrlParser: true })
                             concept2: insertedObjs[1]._id
                         }
                     }
-
                     Pair.create(pair)
-                        .then(() => console.log('Par añadido'))
+                        .then(() => console.log('par añadido'))
 
                 })
                 .catch(err => console.log(err))
         })
-
-
-
     })
     .then(() => console.log("Disconnect"))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
+
 
 
 
@@ -235,4 +230,4 @@ mongoose.connect(process.env.MONGODB, { useNewUrlParser: true })
 //         return mongoose.connection.close()
 //     })
 //     .then(() => console.log("Disconnect"))
-//     .catch(err => console.log(err));
+//     .catch(err => console.log(err));/

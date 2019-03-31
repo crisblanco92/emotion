@@ -1,15 +1,19 @@
 <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
 
-//hacer que rebote, no que cambie bruscamente
 
-.cls-1{
-  fill:#fff;
-  opacity:0.4;
+
+
+.form11-1{
+
+fill:#fff;
+opacity:0.4;
 
 
 animation: form11 10s infinite linear;
 transform-origin: 50% 50%;
+
 }
+
 
     @keyframes form11 {
         from {transform: rotate(0deg)}
@@ -18,7 +22,8 @@ transform-origin: 50% 50%;
 }
 
 
+
 </style>
 
 
-</defs><title>form</title><path class="cls-1" d="M287.89,111.73a45.52,45.52,0,0,1-64.38,64.38Z"/></svg>
+</defs><title>pantallas</title><path class="form11-1" d="M287.89,111.73a45.52,45.52,0,0,1-64.38,64.38Z"/></svg>

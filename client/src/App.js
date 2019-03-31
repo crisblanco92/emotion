@@ -10,6 +10,8 @@ import Login from './components/Login'
 import NavBar from './components/NavBar'
 import TheProject from './components/TheProject'
 import Test from './components/Test'
+import Home from './components/Home'
+
 
 
 import AuthService from './components/Auth/AuthService';
@@ -78,15 +80,6 @@ closeModal = () => {
 		this.setState({ modalIsOpen: false });
 }
 
-handleState = e => {
-		const { name, value } = e.target;
-
-		this.setState({
-				coaster: {
-						...this.state.coaster, [name]: value
-				}
-		})
-}
 
 handleSubmit = e => {
 	e.preventDefault()
@@ -103,12 +96,16 @@ handleSubmit = e => {
 			if (!this.state.loggedInUser) {
 				return (
 					<main>
-						<NavBar userInSession={this.state.loggedInUser} showSignup={this.openModal} showLogin={this.showLogin}  />
-							<div className="main-container">
 
+						
+						<NavBar userInSession={this.state.loggedInUser} showSignup={this.openModal} showLogin={this.showLogin}  />
+							<div className="main-container">						
 							<Test />
+
+							{/* <Home openModal={this.openModal} /> */}
+
 							
-							<button onClick={this.openModal} className="btn create btn-dark">CREATE</button>
+							{/* <button onClick={this.openModal} className="btn create btn-dark">create</button> */}
 							<Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
 								{this.state.showLogin ? <Login setUser={this.setTheUser} getUser={this.getUser}/> : <Signup setUser={this.setTheUser} />}
 								
@@ -118,9 +115,8 @@ handleSubmit = e => {
 										<Route exact path='/signup' render={() => <Signup setUser={this.setTheUser} />} />
 										<Route exact path='/login' render={() => <Login setUser={this.setTheUser} getUser={this.getUser}/>} />
 										<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
+										<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser} openModal={this.openModal}/>} />
 
-										{/* <Route path="/coasters" exact render={() => <CoastersList userInSession={this.state.loggedInUser} />} /> */}
-										{/* <Route path="/coasters/:id" exact component={CoasterDetails} /> */}
 									</Switch>
 
 							</div>
@@ -128,21 +124,22 @@ handleSubmit = e => {
 				)
 			} else {
 				return (
-					<div>
+					<main>
+							<div className="main-container">
 
-						<NavBar userInSession={this.state.loggedInUser} setUser={this.setTheUser} closeModal={this.closeModal}/>
+								<NavBar userInSession={this.state.loggedInUser} setUser={this.setTheUser} closeModal={this.closeModal}/>
+														
+								{/* <Home openModal={this.openModal} /> */}
 
-						<Link to='/test'>CREATE</Link>
+								<Switch>
+								<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
+								<Route exact path='/test' render={() => <Test setUser={this.setTheUser} getUser={this.getUser}/>} />
+								<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser}/>} openModal={this.openModal} />
 
-						<Switch>
-						<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
-						<Route exact path='/test' render={() => <Test setUser={this.setTheUser} getUser={this.getUser}/>} />
+								</Switch>
 
-							{/* <Route path="/coasters" exact render={() => <CoastersList userInSession={this.state.loggedInUser} />} /> */}
-							{/* <Route path="/coasters/:id" exact component={CoasterDetails} /> */}
-						</Switch>
-
-					</div>
+							</div>
+					</main>
 				)
 			}
 		}

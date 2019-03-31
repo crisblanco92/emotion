@@ -40,13 +40,13 @@ import React, { Component } from 'react'
 	          <input type="text" className="login-box" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/> 
 						<br/><br/> <br/>
 	          <label>Password:</label>
-	          <input type="password" className="login-box" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+	          <input type="password" placeholder="********" className="login-box" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
 						<br/><br/> <br/>
 	          <input type="submit" value="Login" className="btn btn-outline-dark" />
 	        </form>
-	        <small>Don't have account? 
+	        {/* <small>Don't have account? 
 	            <Link to={"/signup"}> Signup</Link>
-	        </small>
+	        </small> */}
 	      </div>
 	    )
 	  }

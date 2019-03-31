@@ -42,13 +42,13 @@ class NavBar extends Component {
               <section className="nav-style">
                 <div className="logo-box">
                         <a>
-                        <img src="/public/logo-21.svg" alt="triangle with equal sides" srcset="logo-21.svg" className="logo"/>
+                        <Link to='/'><img src="/public/logo-21.svg" alt="triangle with equal sides" srcset="logo-21.svg" className="logo"/>
+</Link>
+
                         </a> 
                 </div>
                 <div className="nav-left">
-                        <a>
-                            <Link to='/'>CREATE</Link>
-                        </a>
+
                         <a>
                             <Link to='/'>SHARE</Link>
                         </a>
@@ -63,11 +63,11 @@ class NavBar extends Component {
                            Hello, <span>{this.state.loggedInUser.username} </span>!
                            </Link>
                         </a>
-                        <a>
+                        {/* <a>
                           <Link to='/'>
                               <a href="#" onClick={() => this.logoutUser()}>LOG OUT</a>
                           </Link>
-                        </a>
+                        </a> */}
                 </div>
               </section>
           )
@@ -85,9 +85,6 @@ class NavBar extends Component {
                 <div className="nav-left">
                   
                       <a>
-                          <Link to='/signup'>CREATE</Link>
-                      </a>
-                      <a>
                           <Link to='/'>SHARE</Link>
                       </a>
                       <a>
@@ -97,9 +94,9 @@ class NavBar extends Component {
                 </div>
                 <div className="nav-right">
 
-                    <button onClick={this.props.showSignup}>SIGN UP</button>
+                    <button className="signup-btn" onClick={this.props.showSignup}>SIGN UP</button>
 
-                    <button onClick={this.props.showLogin}>LOG IN</button>
+                    <button className="login-btn" onClick={this.props.showLogin}>LOG IN</button>
                   
                       {/* <a>
                           <Link to='/signup'>SIGN UP</Link>

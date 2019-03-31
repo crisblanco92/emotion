@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import AuthService from './Auth/AuthService'
+import Signup from '../components/Signup'
 
 export default class Test extends Component {
 
@@ -8,17 +9,17 @@ export default class Test extends Component {
     super()
     
     this.state = {
+      
       answersGiven : [],
 
     }
 
     this.service = new AuthService()
-    this.getPollas()
-    
+    this.getConcepts()
 
   }
 
-  getPollas = () => {
+  getConcepts = () => {
     this.service.getAllConceptNames()
       .then(response => {//console.log(response)
           this.setState(
@@ -34,23 +35,32 @@ export default class Test extends Component {
 //         .then(response => this.setState({ response: response }))
 // }
 
-accumulateAnswers = () => {
-  
-}
+accumulateAnswers = (e) => {
+      console.log('he clickado')
+  let answersCopy = [...this.state.answersGiven]
 
+  //console.log(this.state.response)
+  if ( e.target.name === "modern" )  answersCopy.push(this.state.response[0].pairOfConcepts[0].concept1.name) 
+  if ( e.target.name === "classic" ) answersCopy.push('quetal') 
 
-
-  render() {
-
-    if (this.state.response) {
-      console.log(this.state.response)
+    this.setState({
+      ...this.state,  answersGiven: answersCopy})
+    }
+    
+    
+    
+    render() {
+      
+      console.log(this.state.answersGiven)
+      if (this.state.response) {
+      //console.log(this.state.response)
       return (
         <div>
-          <h1>Test</h1>
+          <h1></h1>
          
   
-              <button>{this.state.response[0].pairOfConcepts[0].concept1.name}</button>
-              <button>{this.state.response[0].pairOfConcepts[0].concept2.name}</button>
+      <button name="modern" onClick={(e) => this.accumulateAnswers(e)} render={() => <Signup setUser={this.setTheUser}/> }> {this.state.response[0].pairOfConcepts[0].concept1.name} </button>
+              <button name="classic" onClick={(e) => this.accumulateAnswers(e)}>{this.state.response[0].pairOfConcepts[0].concept2.name}</button>
 
       
         </div>

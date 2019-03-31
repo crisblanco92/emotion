@@ -48,6 +48,11 @@ class AuthService {
             .then(response => response.data)
     }
 
+    home = () => {
+        return this.service.get('/home', {})
+            .then(response => response.data)
+    }
+
 
 
 }

@@ -1,7 +1,7 @@
 <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510.24 289.13"><defs><style>
 
 
-.cls-1,.cls-3,.cls-4{
+.form15-1,.form15-3,.form15-4{
 
 fill:none;
 animation: form15 10s infinite linear;
@@ -15,16 +15,16 @@ transform-origin: 50% 50%;
 }
 
 
-.cls-2{
+.form15-2{
 clip-path:url(#clip-path);
 }
 
-.cls-3,.cls-4{
+.form15-3,.form15-4{
 stroke:#fff;
 stroke-miterlimit:10;
 }
 
-.cls-3{
+.form15-3{
 stroke-dasharray:1.97 1.97;
 }
 
@@ -33,4 +33,4 @@ stroke-dasharray:1.97 1.97;
 </style>
 
 
-<clipPath id="clip-path"><rect class="cls-1" x="221.8" y="111" width="67" height="67"/></clipPath></defs><title>form</title><g class="cls-2"><path class="cls-3" d="M222.8,140.22a32.79,32.79,0,0,1,29.64-28.37"/><path class="cls-3" d="M259.58,112A32.79,32.79,0,0,1,288,141.64"/><path class="cls-3" d="M287.8,148.78a32.79,32.79,0,0,1-29.64,28.37"/><path class="cls-3" d="M251,177a32.79,32.79,0,0,1-28.37-29.64"/><path class="cls-4" d="M222.56,145.93c0-.47,0-1,0-1.43s0-1,0-1.43m34.17,34.17c-.47,0-1,0-1.43,0s-1,0-1.43,0M288,143.07c0,.47,0,1,0,1.43s0,1,0,1.43m-34.17-34.17c.48,0,.95,0,1.43,0s1,0,1.43,0"/></g></svg>
+<clipPath id="clip-path"><rect class="form15-1" x="221.8" y="111" width="67" height="67"/></clipPath></defs><title>form</title><g class="form15-2"><path class="form15-3" d="M222.8,140.22a32.79,32.79,0,0,1,29.64-28.37"/><path class="form15-3" d="M259.58,112A32.79,32.79,0,0,1,288,141.64"/><path class="form15-3" d="M287.8,148.78a32.79,32.79,0,0,1-29.64,28.37"/><path class="form15-3" d="M251,177a32.79,32.79,0,0,1-28.37-29.64"/><path class="form15-4" d="M222.56,145.93c0-.47,0-1,0-1.43s0-1,0-1.43m34.17,34.17c-.47,0-1,0-1.43,0s-1,0-1.43,0M288,143.07c0,.47,0,1,0,1.43s0,1,0,1.43m-34.17-34.17c.48,0,.95,0,1.43,0s1,0,1.43,0"/></g></svg>

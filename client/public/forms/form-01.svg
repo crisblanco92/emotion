@@ -2,7 +2,7 @@
 
 //hacer que gire sobre sí mismo también
 
-.cls-1 {
+.form1-1 {
 fill:none;
 stroke:#fff;
 stroke-miterlimit:10;
@@ -22,4 +22,4 @@ transform-origin: 50% 50%;
 
 
 
-</defs><title>form</title><circle class="cls-1" cx="196.34" cy="208.05" r="6.88"/><circle class="cls-1" cx="174.72" cy="189.91" r="5.7"/></svg>
+</defs><title>form</title><circle class="form1-1" cx="196.34" cy="208.05" r="6.88"/><circle class="form1-1" cx="174.72" cy="189.91" r="5.7"/></svg>

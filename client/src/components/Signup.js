@@ -74,11 +74,11 @@ import React, { Component } from 'react'
 														
 										</div>
 								</div>
-								<div className="form-group">
+								{/* <div className="form-group">
 									<small>Already have account? 
 											<Link to={"/login"}> Login</Link>
 									</small>
-								</div>
+								</div> */}
 			
 </div>
 

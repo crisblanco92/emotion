@@ -48,24 +48,24 @@ export default function TheProject() {
 
             <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
             <img src="/project-forms/formas-cuadrado-02.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-03.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-03.svg"  alt=""/>
             <img src="/project-forms/formas-cuadrado-04.svg" alt=""/>
             <img src="/project-forms/formas-cuadrado-05.svg" alt=""/>
             <img src="/project-forms/formas-cuadrado-06.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-07.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-08.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-09.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-10.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-11.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-12.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-13.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-14.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-15.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-16.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-17.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-18.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-19.svg" alt=""/>
-            <img src="/project-forms/formas-cuadrado-20.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
+            <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
       </article>
       <article className="project-info">
 

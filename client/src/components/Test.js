@@ -11,6 +11,7 @@ export default class Test extends Component {
     this.state = {
       
       answersGiven : [],
+      answerIndex: 0
 
     }
 
@@ -23,7 +24,7 @@ export default class Test extends Component {
     this.service.getAllConceptNames()
       .then(response => {//console.log(response)
           this.setState(
-            {...this.state , response:response}
+            {...this.state , response: response, answerIndex: 0}
           )})
       .catch(err => console.log(err))
 
@@ -35,18 +36,32 @@ export default class Test extends Component {
 //         .then(response => this.setState({ response: response }))
 // }
 
-accumulateAnswers = (e) => {
+accumulateAnswers = response => {
       console.log('he clickado')
   let answersCopy = [...this.state.answersGiven]
 
-  //console.log(this.state.response)
-  if ( e.target.name === "modern" )  answersCopy.push(this.state.response[0].pairOfConcepts[0].concept1.name) 
-  if ( e.target.name === "classic" ) answersCopy.push('quetal') 
+    answersCopy.push(response);
 
     this.setState({
-      ...this.state,  answersGiven: answersCopy})
+
+      ...this.state,  answersGiven: answersCopy, answerIndex: this.state.answerIndex+1}, () => {
+          if (this.state.answerIndex >= 10 ) this.saveTest()
+        
+         // console.log('ha terminado el test', this.state.answersIndex)
+
+      })
     }
     
+
+saveTest = () => {
+  const filteredArray = this.state.response.map(userResponse => userResponse._id)
+  console.log(this.state.response)
+  console.log(filteredArray)
+
+  this.service.postAnswers(filteredArray) 
+}
+
+
     
     
     render() {
@@ -55,14 +70,27 @@ accumulateAnswers = (e) => {
       if (this.state.response) {
       //console.log(this.state.response)
       return (
-        <div>
+        <div className="Test">
           <h1></h1>
+
+          {this.state.answerIndex < 10 ?  
+            <React.Fragment>
+              <button onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1.name}</button>
+              <button onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2.name}</button>
+            </React.Fragment>
+       : 
+            <div>
+              {this.state.answersGiven.map(answer => (
+                <React.Fragment>
+                  <img src={answer.imageURL} className="img-selected" />
+                  <p className="fin">{answer.name}</p>
+                </React.Fragment>
+                ))}
+            </div>
+          }
          
   
-      <button name="modern" onClick={(e) => this.accumulateAnswers(e)} render={() => <Signup setUser={this.setTheUser}/> }> {this.state.response[0].pairOfConcepts[0].concept1.name} </button>
-              <button name="classic" onClick={(e) => this.accumulateAnswers(e)}>{this.state.response[0].pairOfConcepts[0].concept2.name}</button>
-
-      
+         
         </div>
       )
     } else {

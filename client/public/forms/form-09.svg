@@ -9,8 +9,8 @@ stroke-miterlimit:10;
 stroke-width:0.5px;
 
 
-animation: form9 10s infinite linear;
-transform-origin: 50% 50%;
+    animation: form9 10s infinite linear;
+    transform-origin: 40% 35%;
 
 }
 

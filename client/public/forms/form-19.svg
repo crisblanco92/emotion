@@ -1,22 +1,28 @@
 <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
 
-//hacer que gire sobre si mismo
 
+.form19-1,.form19-2,.form19-3{
+
+fill:none;
+}
+
+.form19-1,.form19-2{
+stroke:#fff;
+stroke-miterlimit:10;
+}
 
 .form19-1{
-fill:none;
-stroke:#fff;
-stroke-linecap:square;
-stroke-miterlimit:10;
+stroke-width:2px;
 
-animation: form19 10s infinite linear;
+
+animation: form19 4s infinite linear;
 transform-origin: 50% 50%;
-
 }
+
 
     @keyframes form19 {
         from {transform: rotate(0deg)}
-        to {transform: rotate(360deg)}  
+        to {transform: rotate(300deg)}  
 
 }
 
@@ -25,4 +31,4 @@ transform-origin: 50% 50%;
 </style>
 
 
-</defs><title>pantallas</title><path class="form19-1" d="M433.69,154.65A153.45,153.45,0,0,1,402,170.09,152.41,152.41,0,0,1,201.68-2.08"/></svg>
+</defs><title>pantallas</title><path class="form19-1" d="M434.66,156.16a153.29,153.29,0,0,1-82.66,24,154.14,154.14,0,0,1-150.87-185"/><path class="form19-2" d="M438.91,153.35c-1.4,1-2.82,1.89-4.25,2.81"/><path class="form19-3" d="M201.13-4.84A154,154,0,1,1,438.91,153.35"/></svg>

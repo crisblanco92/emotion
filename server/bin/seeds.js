@@ -180,9 +180,9 @@ const figures = [
 
 ]
 
-mongoose.connect(process.env.MONGODB, { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/emotion', { useNewUrlParser: true })
     .then(() => {
-        console.log(`Connect to mongo ${process.env.MONGODB}`)
+        console.log(`Connect to mongo mongodb://localhost/emotion`)
 
         figures.forEach(figuresPair => {
             Concepts.insertMany(figuresPair)

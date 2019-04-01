@@ -42,9 +42,8 @@ class NavBar extends Component {
               <section className="nav-style">
                 <div className="logo-box">
                         <a>
-                        <Link to='/'><img src="/public/logo-21.svg" alt="triangle with equal sides" srcset="logo-21.svg" className="logo"/>
-</Link>
-
+                        <Link to='/'><img src="/public/logo-21.svg" srcset="logo-21.svg" className="logo"/>
+                        </Link>
                         </a> 
                 </div>
                 <div className="nav-left">
@@ -53,21 +52,16 @@ class NavBar extends Component {
                             <Link to='/'>SHARE</Link>
                         </a>
                         <a>
-                            <Link to='/'>THE PROJECT</Link>
+                            <Link to='/theproject'>THE PROJECT</Link>
                         </a>
                   
                 </div>
                 <div className="nav-right">
                         <a>
-                            <Link to="#">
-                           Hello, <span>{this.state.loggedInUser.username} </span>!
-                           </Link>
-                        </a>
-                        {/* <a>
                           <Link to='/'>
-                              <a href="#" onClick={() => this.logoutUser()}>LOG OUT</a>
+                                <button className="login-btn" onClick={() => this.logoutUser()}>LOG OUT</button>
                           </Link>
-                        </a> */}
+                        </a>
                 </div>
               </section>
           )
@@ -78,8 +72,9 @@ class NavBar extends Component {
           return (
               <section className="nav-style">
                 <div className="logo-box">
-                        <a>
-                        <img src="/public/logo-21.svg" alt="triangle with equal sides" srcset="logo-21.svg" className="logo"/>
+                <a>
+                        <Link to='/'><img src="/public/logo-21.svg" srcset="logo-21.svg" className="logo"/>
+                        </Link>
                         </a> 
                 </div>
                 <div className="nav-left">
@@ -97,13 +92,6 @@ class NavBar extends Component {
                     <button className="signup-btn" onClick={this.props.showSignup}>SIGN UP</button>
 
                     <button className="login-btn" onClick={this.props.showLogin}>LOG IN</button>
-                  
-                      {/* <a>
-                          <Link to='/signup'>SIGN UP</Link>
-                      </a>
-                      <a>
-                          <Link to='/login'>LOG IN</Link>
-                      </a> */}
                   
                 </div>
                   

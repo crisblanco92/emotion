@@ -3,13 +3,12 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     type: {
-        enum: ["emotional", "rational"],
+        type:String, enum: ["emotional", "rational"],
     },
     name: String,
-    imageURL: "",
+    imageURL: String,
     center: String,
     speed: String
-
 }, {
     timestamps: true
 });

@@ -75,15 +75,16 @@ saveTest = () => {
 
           {this.state.answerIndex < 10 ?  
             <React.Fragment>
-              <button onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1.name}</button>
-              <button onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2.name}</button>
+              <button className="btn-respuesta1" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1.name}</button>
+            
+              <button className="btn-respuesta2" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2.name}</button>
             </React.Fragment>
        : 
             <div>
               {this.state.answersGiven.map(answer => (
                 <React.Fragment>
                   <img src={answer.imageURL} className="img-selected" />
-                  <p className="fin">{answer.name}</p>
+                  {/* <p className="fin">{answer.name}</p> */}
                 </React.Fragment>
                 ))}
             </div>

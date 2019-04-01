@@ -4,13 +4,18 @@ class AuthService {
     constructor() {
         let service = axios.create({
             baseURL: 'http://localhost:5000/api',
-            withCredentials: true
+            withCredentials: true,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+
         })
         this.service = service
     }
 
-    signup = (username, password) => {
-        return this.service.post('signup', { username, password })
+    signup = (username, password, email, age, location) => {
+        return this.service.post('signup', { username, password, email, age, location })
             .then(response => response.data)
     }
 
@@ -53,6 +58,11 @@ class AuthService {
             .then(response => response.data)
     }
 
+    postAnswers = (arr) => {
+        console.log('estoy en el servicio y he recibido esto', arr)
+        return this.service.post('/postAnswers', {arr})
+            .then(response => response.data)
+    }  
 
 
 }

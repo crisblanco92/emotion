@@ -81,6 +81,7 @@ closeModal = () => {
 }
 
 
+
 handleSubmit = e => {
 	e.preventDefault()
 	this.closeModal()
@@ -100,7 +101,7 @@ handleSubmit = e => {
 						
 						<NavBar userInSession={this.state.loggedInUser} showSignup={this.openModal} showLogin={this.showLogin}  />
 							<div className="main-container">						
-							<Test />
+							{/* <Test /> */}
 
 							{/* <Home openModal={this.openModal} /> */}
 
@@ -128,13 +129,15 @@ handleSubmit = e => {
 							<div className="main-container">
 
 								<NavBar userInSession={this.state.loggedInUser} setUser={this.setTheUser} closeModal={this.closeModal}/>
-														
+
+								
+
 								{/* <Home openModal={this.openModal} /> */}
 
 								<Switch>
 								<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
 								<Route exact path='/test' render={() => <Test setUser={this.setTheUser} getUser={this.getUser}/>} />
-								<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser}/>} openModal={this.openModal} />
+								<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser}  goToTest={true}/>} />
 
 								</Switch>
 

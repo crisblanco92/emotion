@@ -6,14 +6,14 @@
 fill:#fff;
 opacity:0.2;
 
-animation: form18 10s infinite linear;
+animation: form18 4s infinite linear alternate;
 transform-origin: 50% 50%;
 }
 
 
     @keyframes form18 {
         from {transform: rotate(0deg)}
-        to {transform: rotate(360deg)}  
+        to {transform: rotate(300deg)}  
 
 }
 

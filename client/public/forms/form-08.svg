@@ -11,6 +11,13 @@ stroke-dasharray:1 5;
 
 
 }
+.form8-3:nth-child(2n){animation: shiny 1s ease-in infinite alternate}
+        
+@keyframes shiny {
+        
+            from {opacity: 0}
+            to {opacity:1}
+}
 
 
 

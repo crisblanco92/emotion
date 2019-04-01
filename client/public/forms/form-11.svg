@@ -9,7 +9,7 @@ fill:#fff;
 opacity:0.4;
 
 
-animation: form11 10s infinite linear;
+animation: form11 2s infinite linear alternate;
 transform-origin: 50% 50%;
 
 }
@@ -17,7 +17,7 @@ transform-origin: 50% 50%;
 
     @keyframes form11 {
         from {transform: rotate(0deg)}
-        to {transform: rotate(360deg)}  
+        to {transform: rotate(55deg)}  
 
 }
 

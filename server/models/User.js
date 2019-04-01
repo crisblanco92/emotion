@@ -6,7 +6,8 @@ const userSchema = new Schema({
     password: String,
     username: String,
     age: Number,
-    location: String
+    location: String,
+    concepts: [{type:Schema.Types.ObjectId, ref: "Concepts"}]
 }, {
     timestamps: true
 });

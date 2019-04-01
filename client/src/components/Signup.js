@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 	class Signup extends Component {
 	  constructor(props){
 	    super(props)
-	    this.state = { username: '', password: '' }
+	    this.state = { username: '', password: '', email: '', age: '', location: '' }
 			this.service = new AuthService()
 
 	  }
@@ -17,19 +17,21 @@ import React, { Component } from 'react'
 			const password = this.state.password
 			const age = this.state.age
 			const location = this.state.location
-	//console.log("juju")
-	    this.service.signup(username, password, age, location)
-	    .then( response => {
-	        this.setState({
-							username: "", 
-							email: "",
-							password: "",
-							age: "",
-							location: ""
-	        })
-	        this.props.getUser(response)
-	    })
-	    .catch( error => console.log(error) )
+			const email = this.state.email
+
+			this.service.signup(username, password, age, location, email)
+				.then( response => {
+						this.setState({
+								username: "", 
+								email: "",
+								password: "",
+								age: "",
+								location: ""
+						})
+						this.props.getUser(response)
+					})
+					// TODO: recoger errores del back
+				.catch(err => console.log('pete', err.response.data.message))
 		}
 		
 	

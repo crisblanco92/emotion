@@ -1,1 +1,23 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75px;stroke-dasharray:1 5;}</style></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><polyline class="cls-1" points="68.25 2.83 119.41 75.98 75.13 197.64"/></svg>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>
+
+
+.project8-1{
+fill:none;
+stroke:#fff;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-width:0.75px;
+stroke-dasharray:1 5;
+
+animation: project8 10s infinite linear alternate;
+transform-origin: 50% 50%;
+}
+
+    @keyframes project8 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(260deg)}  
+}
+
+
+
+</style></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><polyline class="project8-1" points="68.25 2.83 119.41 75.98 75.13 197.64"/></svg>

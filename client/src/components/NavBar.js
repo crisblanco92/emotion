@@ -43,7 +43,7 @@ class NavBar extends Component {
                 <div className="logo-box">                     
 
                         <a>
-                        <Link to='/'><img src="/public/logo-21.svg" srcset="logo-21.svg" className="logo"/>
+                        <Link to='/'><img src="/public/logo.svg" srcset="logo.svg" className="logo"/>
                         </Link>
                         </a> 
                 </div>
@@ -77,7 +77,7 @@ class NavBar extends Component {
                      
                     
                         <a>
-                        <Link to='/'><img src="/public/logo-21.svg" srcset="logo-21.svg" className="logo"/>
+                        <Link to='/'><img src="/public/logo.svg" srcset="logo.svg" className="logo"/>
                         </Link>
                         </a> 
                 </div>

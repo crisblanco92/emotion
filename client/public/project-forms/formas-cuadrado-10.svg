@@ -1,1 +1,19 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><path class="cls-1" d="M98.11,79.25s-5.78-11-16.65-4.06S75,93.77,76.69,94.79c0,0,7.09,13.33,22.81,5.26s5.65-25.91,5.65-25.91-10.4-18.76-29.7-7.24c-22.25,13.28-7.68,34.36-7.68,34.36s14.81,24,39,8.8S120,69.21,117.5,65.18C113,58,96.62,36.08,65.92,53.76,37.2,70.3,44.83,103.19,51.82,112.83c8.67,11.94,30.06,37.48,67.76,14.9,46.65-27.94,18.09-77.19,18.09-77.19"/></svg>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>
+
+.project10-1{
+fill:none;
+stroke:#fff;
+stroke-miterlimit:10;
+stroke-width:0.5px;
+
+ animation: project10 10s infinite linear;
+    transform-origin: 40% 35%;
+}
+
+  @keyframes project10 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+</style></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><path class="project10-1" d="M98.11,79.25s-5.78-11-16.65-4.06S75,93.77,76.69,94.79c0,0,7.09,13.33,22.81,5.26s5.65-25.91,5.65-25.91-10.4-18.76-29.7-7.24c-22.25,13.28-7.68,34.36-7.68,34.36s14.81,24,39,8.8S120,69.21,117.5,65.18C113,58,96.62,36.08,65.92,53.76,37.2,70.3,44.83,103.19,51.82,112.83c8.67,11.94,30.06,37.48,67.76,14.9,46.65-27.94,18.09-77.19,18.09-77.19"/></svg>

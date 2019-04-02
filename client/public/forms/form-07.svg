@@ -9,15 +9,18 @@ stroke-linejoin:round;
 stroke-width:0.75px;
 stroke-dasharray:1 5;
 
+
+animation: form3 10s infinite linear;
+transform-origin: 50% 50%;
 }
 
-.form7-1:nth-child(2n){animation: shiny 1s ease-in infinite alternate}
-        
-@keyframes shiny {
-        
-            from {opacity: 0}
-            to {opacity:1}
+    @keyframes form3 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
 }
+
+
 
 
 

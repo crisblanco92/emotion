@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 	    super(props)
 	    this.state = { username: '', password: '', email: '', age: '', location: '' }
 			this.service = new AuthService()
-
+			console.log(props)
 	  }
 	
 	  handleFormSubmit = (event) => {
@@ -31,7 +31,7 @@ import React, { Component } from 'react'
 						this.props.getUser(response)
 					})
 					// TODO: recoger errores del back
-				.catch(err => console.log('pete', err))
+				.catch(err => console.log('pete: ', err))
 		}
 		
 	
@@ -53,24 +53,29 @@ import React, { Component } from 'react'
                     <div className="col-sm-12">
 												<form onSubmit={this.handleFormSubmit} className="signup-form">
                             <div className="form-group">
+														<div className="rowForm">
 																<label>Email:</label>
 																<input type="text" name="email" className="signup-box" value={this.state.email} autoComplete="off" onChange={ e => this.handleChange(e)}/>
-																<br/><br/> <br/>
+														</div>										
+														<div className="rowForm">
 																<label>Password:</label>
 																<input type="password" name="password" className="signup-box" placeholder="*******" autoComplete="off" value={this.state.password} onChange={ e => this.handleChange(e)} />
-																<br/><br/> <br/>
-																<label>Name:</label>
-																<input type="text" name="username" className="signup-box" placeholder="How you want to be seen" autoComplete="off" value={this.state.username} onChange={ e => this.handleChange(e)}/>
-																<br/><br/> <br/>
+														</div>										
+														<div className="rowForm">
+																<label>Username:</label>
+																<input type="text" name="username" className="signup-box" placeholder="How you want to be seen, no spaces" autoComplete="off" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+														</div>										
+														<div className="rowForm">
 																<label>From:</label>
-																<input type="text" name="location" className="signup-box" placeholder="Where are you from?" value={this.state.location} autoComplete="off" onChange={ e => this.handleChange(e)}/>
-																<br/><br/> <br/>
+																<input type="text" name="location" className="signup-box" placeholder="Madrid, Spain" value={this.state.location} autoComplete="off" onChange={ e => this.handleChange(e)}/>
+														</div>										
+														<div className="rowForm">
 																<label>Age:</label>
 																<input type="text" name="age" className="signup-box" value={this.state.age} autoComplete="off" onChange={ e => this.handleChange(e)}/>
-																<br/><br/> <br/>
+														</div>										
 
 
-																<input type="submit" value="Sign up" className="btn btn-outline-dark"/>
+																<input type="submit" value="Sign up" className="btn-signup"/>
 														</div>
 												</form>		
 														

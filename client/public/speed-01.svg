@@ -11,6 +11,14 @@ stroke-width:0.5px;
 .speed1-2{
 fill:#fff;
 
+animation: speed1 12s infinite linear;
+transform-origin: 50% 50%;
+}
+
+@keyframes speed1 {
+from {transform: rotate(0deg)}
+to {transform: rotate(360deg)}  
+
 }
 
 

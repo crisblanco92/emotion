@@ -36,13 +36,17 @@ import React, { Component } from 'react'
 	        <h1></h1>
 
 	        <form onSubmit={this.handleFormSubmit} className="login-form">
+					<div className="rowForm">
 	          <label>Username:</label>
 	          <input type="text" className="login-box" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/> 
-						<br/><br/> <br/>
+					</div>
+					<div className="rowForm">
 	          <label>Password:</label>
 	          <input type="password" placeholder="********" className="login-box" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-						<br/><br/> <br/>
-	          <input type="submit" value="Login" className="btn btn-outline-dark" />
+	          
+					</div>	
+					
+					<input type="submit" value="Login" className="btn-login" />
 	        </form>
 	        {/* <small>Don't have account? 
 	            <Link to={"/signup"}> Signup</Link>

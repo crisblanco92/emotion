@@ -16,11 +16,26 @@ a {
 .create {
     background: white;
     color: black;
-    border-radius: 50px;
-    font-family: 'PT Mono', monospace;
+    border-radius: 30px;
+    border: none !important;
+    font-family: 'PT Mono', monospace !important;
     margin-top: 400px !important;
     left: calc(50% - 50px);
     position: absolute;
+    padding: 10px 20px;
+}
+.create a {
+    text-decoration:none;
+    color:black;
+}
+
+.create:hover {
+    background: black;
+    color:white;
+    border: 0.5px solid white !important;
+}
+.create a:hover {
+    color:white;
 }
 
 
@@ -193,8 +208,6 @@ h1 {
     padding: 50px 20px 0 20px;
 }
 
-input {}
-
 small {
     color: white;
 }
@@ -212,19 +225,55 @@ label {
     border-radius: 10px;
     width: 250px;
     color: White;
-    font-family: 'PT Mono', monospace
+    font-family: 'PT Mono', monospace;
+    flex: 0 0 70%;
 }
 
-.btn {
+.btn-signup {
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
     display: block;
-    margin: 0 auto;
+    margin: 35px auto 0 auto;
     width: 100px;
-    color: grey;
+    color: black;
+    font-size: 15px;
+    font-family: 'PT Mono', monospace;
+
 }
 
-.btn:hover {
+.btn-signup:hover {
+    background-color:black;
     text-decoration: none;
-    color: grey;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-login {
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: block;
+    margin: 45px auto 0 auto;
+    width: 100px;
+    color: black;
+    font-size: 15px;
+        font-family: 'PT Mono', monospace;
+
+}
+
+.btn-login:hover {
+    background-color:black;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.rowForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-bottom: 30px;
 }
 
 
@@ -349,8 +398,10 @@ span {
     color: white;
     border-radius: 70px;
     padding: 15px 30px;
-    font-family: monospace;
+    font-family: 'PT Mono', monospace;
     font-size: 20px;
+    margin-bottom: 30px;
+
 }
 
 .btn-respuesta1:hover,
@@ -363,6 +414,11 @@ button:focus {
     outline: 0;
 }
 
+.botones-test {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
 
 /* --------------------------- RESULTS */
 
@@ -373,3 +429,50 @@ button:focus {
     width: 90vw;
 }
 
+.emo-percent {
+    font-size: 15px;
+    position:absolute;
+    color:white;
+    bottom: 5%;
+    left: 5%; 
+}
+.rat-percent {
+    bottom: 5%;
+    left: 9%;
+    font-size: 15px;
+    position:absolute;
+    color:white;
+}
+
+.fin-name, .fin-loc {
+    font-size: 15px;
+    position:absolute;
+    color:white;
+}
+
+.fin-name {
+    bottom: 13%;
+    left: 5%;
+}
+
+.fin-loc {
+    bottom: 9%;
+    left: 5%;
+}
+
+.share-btn {
+    background-color:black;
+    color:white;
+    font-family: 'PT Mono', monospace;
+    position:absolute;
+    right: 5%;
+    bottom: 7%;
+    border-radius: 20px;
+    padding: 5px 16px;
+
+}
+
+.share-btn:hover {
+    background-color: white;
+    color:black;
+}

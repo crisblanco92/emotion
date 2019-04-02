@@ -16,7 +16,11 @@ class AuthService {
 
     signup = (username, password, email, age, location) => {
         return this.service.post('signup', { username, password, email, age, location })
-            .then(response => response.data)
+            .then(response => {
+                console.log('no hay petes en service')
+                return response.data
+            })
+            .catch(err => console.log('si hay petes en service', err))
     }
 
     loggedin = () => {

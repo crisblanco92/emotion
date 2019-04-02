@@ -50,14 +50,14 @@ const figures = [
         {
             name: "ingrained",
             figure: "figure6",
-            concept: "rational",
+            concept : "rational",
             center: "",
             speed: "",
             imageURL: "/forms/form-06.svg",
         }
     ],
     [{
-            name: "self-leaning",
+            name: "self-learning",
             figure: "figure7",
             concept: "emotional",
             center: "",

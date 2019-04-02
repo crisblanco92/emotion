@@ -54,9 +54,11 @@ accumulateAnswers = response => {
     
 
 saveTest = () => {
-  const filteredArray = this.state.response.map(userResponse => userResponse._id)
-  console.log(this.state.response)
+  const filteredArray = this.state.answersGiven.map(userResponse => userResponse._id)
+  console.log(this.state.answersGiven)
   console.log(filteredArray)
+
+
 
   this.service.postAnswers(filteredArray) 
 }
@@ -84,7 +86,9 @@ saveTest = () => {
               {this.state.answersGiven.map(answer => (
                 <React.Fragment>
                   <img src={answer.imageURL} className="img-selected" />
-                  {/* <p className="fin">{answer.name}</p> */}
+                  <p className="fin">{answer.username}</p>
+                  <p className="fin">{answer.age}</p>
+                  <p className="fin">{answer.location}</p>
                 </React.Fragment>
                 ))}
             </div>

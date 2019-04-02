@@ -31,7 +31,7 @@ import React, { Component } from 'react'
 						this.props.getUser(response)
 					})
 					// TODO: recoger errores del back
-				.catch(err => console.log('pete', err.response.data.message))
+				.catch(err => console.log('pete', err))
 		}
 		
 	

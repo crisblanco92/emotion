@@ -44,6 +44,9 @@ export default function TheProject() {
         </div>
 
       </article>
+
+      <h2 className="the-forms">THE FORMS</h2>
+
       <article className="project-forms">
 
             <img src="/project-forms/formas-cuadrado-01.svg" alt=""/>
@@ -67,8 +70,53 @@ export default function TheProject() {
             <img src="/project-forms/formas-cuadrado-19.svg" alt=""/>
             <img src="/project-forms/formas-cuadrado-20.svg" alt=""/>
       </article>
+
+    <h2 className="further-info">FURTHER EXPLANATION</h2>
       <article className="project-info">
 
+<div className="speeds">
+        <div className="speed1">
+        <img src="/public/speed-01.svg" srcset="speed-01.svg" className="speed"/>
+          <p className="emorat">E <span>0      100</span></p>
+          <p className="emorat">R <span>100    0</span></p>
+          <p className="vel">V <span>0</span></p>
+        </div>
+
+        <div className="speed1">
+        <img src="/public/speed-02.svg" srcset="speed-02.svg" className="speed"/>
+          <p className="emorat">E <span>10    90</span></p>
+          <p className="emorat">R <span>90    10</span></p>
+          <p className="vel">V <span>1</span></p>
+        </div>
+
+        <div className="speed1">
+        <img src="/public/speed-03.svg" srcset="speed-03.svg" className="speed"/>
+          <p className="emorat">E <span>20    80</span></p>
+          <p className="emorat">R <span>80    20</span></p>
+          <p className="vel">V <span>2</span></p>
+        </div>
+
+        <div className="speed1">
+        <img src="/public/speed-04.svg" srcset="speed-04.svg" className="speed"/>
+          <p className="emorat">E <span>30    70</span></p>
+          <p className="emorat">R <span>70    30</span></p>
+          <p className="vel">V <span>3</span></p>
+        </div>
+
+        <div className="speed1">
+        <img src="/public/speed-05.svg" srcset="speed-05.svg" className="speed"/>
+          <p className="emorat">E <span>40    60</span></p>
+          <p className="emorat">R <span>60    40</span></p>
+          <p className="vel">V <span>4</span></p>
+        </div>
+
+        <div className="speed1">
+        <img src="/public/speed-06.svg" srcset="speed-06.svg" className="speed"/>
+          <p className="emorat">E <span>50    50</span></p>
+          <p className="emorat">R <span>50    50</span></p>
+          <p className="vel">V <span>5</span></p>
+        </div>
+</div>
         
       </article>
 

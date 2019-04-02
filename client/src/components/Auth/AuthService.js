@@ -14,7 +14,12 @@ class AuthService {
         this.service = service
     }
 
-    signup = (username, password, email, age, location) => {
+    signup = (username, password, age, location, email) => {
+        console.log('la edad es :', age)
+        console.log('la location es :', location)
+
+        console.log('la email es :', email)
+
         return this.service.post('signup', { username, password, email, age, location })
             .then(response => {
                 console.log('no hay petes en service')

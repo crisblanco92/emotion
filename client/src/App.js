@@ -108,15 +108,14 @@ handleSubmit = e => {
 							
 							{/* <button onClick={this.openModal} className="btn create btn-dark">create</button> */}
 							<Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
-								{this.state.showLogin ? <Login setUser={this.setTheUser} getUser={this.getUser}/> : <Signup setUser={this.setTheUser} />}
+								{this.state.showLogin ? <Login setUser={this.setTheUser} getUser={this.getUser}/> : <Signup getUser={this.setTheUser} />}
 								
 							</Modal>
 
 									<Switch>
-										<Route exact path='/signup' render={() => <Signup setUser={this.setTheUser} />} />
 										<Route exact path='/login' render={() => <Login setUser={this.setTheUser} getUser={this.getUser}/>} />
 										<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
-										<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser} openModal={this.openModal}/>} />
+										<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser} openModal={this.showLogin}/>} />
 
 									</Switch>
 
@@ -136,7 +135,7 @@ handleSubmit = e => {
 
 								<Switch>
 								<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
-								<Route exact path='/test' render={() => <Test setUser={this.setTheUser} getUser={this.getUser}/>} />
+								<Route exact path='/test' render={() => <Test userInSession={this.state.loggedInUser} setUser={this.setTheUser} getUser={this.getUser}/>} />
 								<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser}  goToTest={true}/>} />
 
 								</Switch>

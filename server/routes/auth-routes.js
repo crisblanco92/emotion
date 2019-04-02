@@ -9,6 +9,9 @@ const User = require('../models/User')
 authRoutes.post('/signup', (req, res, next) => {
     const username = req.body.username
     const password = req.body.password
+    const age = req.body.age
+    const email = req.body.email
+    const location = req.body.location
 
     console.log(username, password)
     if (!username || !password) {
@@ -37,7 +40,11 @@ authRoutes.post('/signup', (req, res, next) => {
 
         const aNewUser = new User({
             username: username,
-            password: hashPass
+            password: hashPass,
+            age: age,
+            email: email,
+            location: location
+
         })
 
         aNewUser.save(err => {

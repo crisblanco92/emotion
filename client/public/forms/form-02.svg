@@ -22,8 +22,12 @@ stroke-miterlimit:10;
 
 
 <script>
-window.onload = () => {
-    addRotateTransform('group2', 2, -1);
+console.log('test');
+setTimeout(()=> {
+ addRotateTransform('group2', 2, -1);
+
+}, 2000)
+   
 
   function addRotateTransform(target_id, speed, direction) {
       var element_to_rotate = document.getElementById(target_id);
@@ -44,7 +48,6 @@ window.onload = () => {
       my_transform.beginElement();
     }
 
-}
 
 
 

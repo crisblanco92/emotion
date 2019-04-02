@@ -7,7 +7,13 @@ const userSchema = new Schema({
     username: String,
     age: Number,
     location: String,
-    concepts: [{type:Schema.Types.ObjectId, ref: "Concepts"}]
+    test: {
+        concepts: [{type:Schema.Types.ObjectId, ref: "Concepts"}],
+        velocity: {
+            rational: Number, 
+            emotional: Number
+        }
+    }
 }, {
     timestamps: true
 });

@@ -8,7 +8,8 @@ const userSchema = new Schema({
     name: String,
     imageURL: String,
     center: String,
-    speed: String
+    speed: String, 
+    concept: String
 }, {
     timestamps: true
 });

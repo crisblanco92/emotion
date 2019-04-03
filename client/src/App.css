@@ -601,16 +601,22 @@ h3 {
 }
 
 .circulos {
-    margin-left: 298px;
+    margin-left: 299px;
     margin-top: -75px;
 }
 
 .circulos>div {
     display: inline-block;
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
     border-radius: 50px;
-    margin-right: 93px;
+    margin-right: 89px;
+}
+
+.circulos>div>button {
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
 }
 
 .porcentajes {
@@ -636,31 +642,46 @@ h3 {
     color: grey;
 }
 
-.circulo6 {
+.circulo6>button {
     background: white;
 }
 
-.circulo5,
-.circulo7 {
+.circulo5>button,
+.circulo7>button {
     background: rgba(255, 255, 255, 0.9)
 }
 
-.circulo4,
-.circulo8 {
+.circulo4>button,
+.circulo8>button {
     background: rgba(255, 255, 255, 0.7)
 }
 
-.circulo3,
-.circulo9 {
+.circulo3>button,
+.circulo9>button {
     background: rgba(255, 255, 255, 0.5)
 }
 
-.circulo2,
-.circulo10 {
+.circulo2>button,
+.circulo10>button {
     background: rgba(255, 255, 255, 0.3)
 }
 
-.circulo1,
-.circulo11 {
+.circulo1>button,
+.circulo11>button {
     background: rgba(255, 255, 255, 0.2)
+}
+
+
+/* -------------------GLOBAL */
+
+.circulos-container {
+    width: 60vw;
+    height: 600px;
+    margin: 70px auto 0 auto;
+}
+
+.cada-circulo {
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
 }

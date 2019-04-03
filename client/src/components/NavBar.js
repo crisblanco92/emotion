@@ -50,10 +50,10 @@ class NavBar extends Component {
                 <div className="nav-left">
 
                         <a>
-                            <Link to='/'>SHARE</Link>
+                            <Link to='/share' className="selected">SHARE</Link>
                         </a>
                         <a>
-                            <Link to='/theproject'>THE PROJECT</Link>
+                            <Link to='/theproject' className="selected">THE PROJECT</Link>
                         </a>
                   
                 </div>
@@ -84,10 +84,10 @@ class NavBar extends Component {
                 <div className="nav-left">
                   
                       <a>
-                          <Link to='/'>SHARE</Link>
+                          <Link to='/share' className="selected">SHARE</Link>
                       </a>
                       <a>
-                          <Link to='/theproject'>THE PROJECT</Link>
+                          <Link to='/theproject' className="selected">THE PROJECT</Link>
                       </a>
                   
                 </div>

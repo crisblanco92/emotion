@@ -11,6 +11,7 @@ import NavBar from './components/NavBar'
 import TheProject from './components/TheProject'
 import Test from './components/Test'
 import Home from './components/Home'
+import Share from './components/Share'
 
 
 
@@ -101,12 +102,7 @@ handleSubmit = e => {
 						
 						<NavBar userInSession={this.state.loggedInUser} showSignup={this.openModal} showLogin={this.showLogin}  />
 							<div className="main-container">						
-							{/* <Test /> */}
 
-							{/* <Home openModal={this.openModal} /> */}
-
-							
-							{/* <button onClick={this.openModal} className="btn create btn-dark">create</button> */}
 							<Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
 								{this.state.showLogin ? <Login setUser={this.setTheUser} getUser={this.getUser}/> : <Signup getUser={this.setTheUser} />}
 								
@@ -116,6 +112,7 @@ handleSubmit = e => {
 										<Route exact path='/login' render={() => <Login setUser={this.setTheUser} getUser={this.getUser}/>} />
 										<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
 										<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser} openModal={this.showLogin}/>} />
+										<Route exact path='/share' render={() => <Share setUser={this.setTheUser} getUser={this.getUser}/>} />
 
 									</Switch>
 
@@ -137,6 +134,7 @@ handleSubmit = e => {
 								<Route exact path='/theproject' render={() => <TheProject setUser={this.setTheUser} getUser={this.getUser}/>} />
 								<Route exact path='/test' render={() => <Test userInSession={this.state.loggedInUser} setUser={this.setTheUser} getUser={this.getUser}/>} />
 								<Route exact path='/' render={() => <Home setUser={this.setTheUser} getUser={this.getUser}  goToTest={true}/>} />
+								<Route exact path='/share' render={() => <Share setUser={this.setTheUser} getUser={this.getUser}/>} />
 
 								</Switch>
 

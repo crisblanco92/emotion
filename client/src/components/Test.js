@@ -2,6 +2,27 @@ import React, { Component } from 'react'
 
 import AuthService from './Auth/AuthService'
 import Signup from '../components/Signup'
+import Share from '../components/Share'
+import Modal from 'react-modal'
+import Home from '../components/Home'
+import SharingWindow from './SharingWindow';
+
+
+
+
+const customStyles = {
+	content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+			width: '40%'
+	}
+}
+
+
 
 export default class Test extends Component {
 
@@ -14,6 +35,7 @@ export default class Test extends Component {
       answerIndex: 0,
       rationalCounter : 0,
       emotionalCounter: 0
+      //showShareWindow : false
     }
 
     this.service = new AuthService()
@@ -78,11 +100,23 @@ saveTest = () => {
     });
 
 
-  this.service.postAnswers(filteredArray) 
+  this.service.postAnswers(filteredArray, rationalCounter, emotionalCounter) 
   this.setState({
     ...this.state, emotionalCounter , rationalCounter
   })
 }
+
+
+
+showShareWindow = () => {
+  this.setState({ modalIsOpen: true, showShareWindow: true });
+
+}
+
+closeModal = () => {
+  this.setState({ modalIsOpen: false });
+}
+
 
 
     
@@ -120,7 +154,12 @@ saveTest = () => {
                   <p className="emo-percent"><span>E - {this.state.emotionalCounter}</span></p>
                   <p className="rat-percent"><span>R - {this.state.rationalCounter}</span></p>
 
-                  <button className="share-btn">share</button>
+                  <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
+								    {this.state.showShareWindow ? <SharingWindow setUser={this.setTheUser} getUser={this.getUser}/> : <Home getUser={this.setTheUser} />}
+								
+							    </Modal>
+
+                  <button className="sharefromtest-btn" onClick={(e) => this.showShareWindow(this.state.openModal)}>share</button>
 
             </div>
           }

@@ -1,11 +1,10 @@
 import React from 'react'
-import Share from '../components/Share'
 
 export default function TheProject() {
   return (
 
     <section className="project-container">
-    <Share />
+ 
 
       <article className="project-resume">
         <div className="column1">
@@ -119,7 +118,10 @@ export default function TheProject() {
           <p className="emorat">R <span>50    50</span></p>
           <p className="vel">V <span>6</span></p>
         </div>
+
+
 </div>
+        <p className="copyright"> e-motion 2019 </p>
         
       </article>
 

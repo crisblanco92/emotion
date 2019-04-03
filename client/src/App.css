@@ -24,18 +24,20 @@ a {
     position: absolute;
     padding: 10px 20px;
 }
+
 .create a {
-    text-decoration:none;
-    color:black;
+    text-decoration: none;
+    color: black;
 }
 
 .create:hover {
     background: black;
-    color:white;
+    color: white;
     border: 0.5px solid white !important;
 }
+
 .create a:hover {
-    color:white;
+    color: white;
 }
 
 
@@ -76,10 +78,11 @@ h1 {
     z-index: 0;
 }
 
-
-/* input:focus {
-    outline: 0 none;
-} */
+.copyright {
+    color: grey;
+    margin-top: 170px;
+    font-size: 12px;
+}
 
 
 /* --------------------------- NAV --------------------------- */
@@ -153,6 +156,10 @@ h1 {
     transition: 0.5s ease;
 }
 
+.nav-left a .selected {
+    border-color: white;
+}
+
 
 /* ---------------------------SIGN-UP / LOGIN --------------------------- */
 
@@ -204,12 +211,31 @@ h1 {
     border: 1px solid white;
     border-radius: 20px;
     display: block;
-    height: 300px;
+    height: 330px;
     padding: 50px 20px 0 20px;
 }
 
 small {
+    font-size: 12px;
     color: white;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+}
+
+small a {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: grey;
+    margin-left: 10px;
+}
+
+small a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 label {
@@ -239,11 +265,10 @@ label {
     color: black;
     font-size: 15px;
     font-family: 'PT Mono', monospace;
-
 }
 
 .btn-signup:hover {
-    background-color:black;
+    background-color: black;
     text-decoration: none;
     color: white;
     transition: 0.5s ease-in-out;
@@ -258,16 +283,16 @@ label {
     width: 100px;
     color: black;
     font-size: 15px;
-        font-family: 'PT Mono', monospace;
-
+    font-family: 'PT Mono', monospace;
 }
 
 .btn-login:hover {
-    background-color:black;
+    background-color: black;
     text-decoration: none;
     color: white;
     transition: 0.5s ease-in-out;
 }
+
 .rowForm {
     display: flex;
     align-items: center;
@@ -279,7 +304,8 @@ label {
 
 /* ---------------------------THE PROJECT--------------------------- */
 
-.project-container {
+.project-container,
+.share-container {
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -311,23 +337,25 @@ h2 {
     margin: 30px;
 }
 
-.the-forms, .further-info {
-    margin-left:257px;
+.the-forms,
+.further-info {
+    margin-left: 257px;
     margin-bottom: 50px;
 }
 
 .further-info {
     margin-top: 210px;
 }
+
 .project-info {
     margin-top: 210px;
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    padding-bottom: 210px;
-
+    /* padding-bottom: 210px; */
 }
+
 .project-info img {
     max-width: 300px;
     flex: 0 0 25%;
@@ -339,6 +367,7 @@ h2 {
     width: 1600px;
     margin: 0 auto;
 }
+
 .speed1 {
     width: 12%;
 }
@@ -347,7 +376,6 @@ h2 {
     text-align: center;
     margin-bottom: 5px;
     margin-top: 10px;
-
 }
 
 .vel {
@@ -373,7 +401,7 @@ h2 {
 }
 
 span {
-    color:grey;
+    color: grey;
 }
 
 
@@ -401,7 +429,6 @@ span {
     font-family: 'PT Mono', monospace;
     font-size: 20px;
     margin-bottom: 30px;
-
 }
 
 .btn-respuesta1:hover,
@@ -420,6 +447,7 @@ button:focus {
     margin-bottom: 30px;
 }
 
+
 /* --------------------------- RESULTS */
 
 .img-selected {
@@ -431,23 +459,25 @@ button:focus {
 
 .emo-percent {
     font-size: 15px;
-    position:absolute;
-    color:white;
+    position: absolute;
+    color: white;
     bottom: 5%;
-    left: 5%; 
+    left: 5%;
 }
+
 .rat-percent {
     bottom: 5%;
     left: 9%;
     font-size: 15px;
-    position:absolute;
-    color:white;
+    position: absolute;
+    color: white;
 }
 
-.fin-name, .fin-loc {
+.fin-name,
+.fin-loc {
     font-size: 15px;
-    position:absolute;
-    color:white;
+    position: absolute;
+    color: white;
 }
 
 .fin-name {
@@ -460,19 +490,177 @@ button:focus {
     left: 5%;
 }
 
-.share-btn {
-    background-color:black;
-    color:white;
+.sharefromtest-btn {
+    background-color: black;
+    color: white;
     font-family: 'PT Mono', monospace;
-    position:absolute;
+    position: absolute;
     right: 5%;
     bottom: 7%;
     border-radius: 20px;
     padding: 5px 16px;
-
 }
 
-.share-btn:hover {
+.sharefromtest-btn:hover {
     background-color: white;
-    color:black;
+    color: black;
+}
+
+
+/* --------------------------- SHARING WINDOW */
+
+.sharingwindow-container {
+    margin-left: calc(50% - 250px);
+    height: 500px;
+    width: 500px;
+    font-size: 12px;
+    margin-top: -20px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: block;
+    height: 240px;
+    padding: 50px 20px 0 20px;
+}
+
+h3 {
+    display: block;
+    font-size: 20px;
+    color: White;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 270px;
+    line-height: 30px
+}
+
+.btn-sharing {
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: block;
+    margin: 35px auto 0 auto;
+    width: 100px;
+    color: black;
+    font-size: 15px;
+    font-family: 'PT Mono', monospace;
+}
+
+.btn-sharing:hover {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+    border: 1px solid white;
+}
+
+.no {
+    position: absolute;
+    left: 70%;
+    top: 59%;
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.no a {
+    text-decoration: none;
+    color: grey;
+}
+
+.no a:hover {
+    color: white !important;
+}
+
+
+/* --------------------------- SHARE --------------------------- */
+
+.share-container {
+    padding-top: 265px !important;
+}
+
+.letra-e {
+    position: absolute;
+    top: 205px;
+    left: 12%;
+    font-size: 30px;
+}
+
+.letra-r {
+    position: absolute;
+    top: 295px;
+    left: 12%;
+    font-size: 30px;
+}
+
+.linea {
+    height: 0.5px;
+    width: 1150px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 17%;
+    top: 275px;
+}
+
+.circulos {
+    margin-left: 298px;
+    margin-top: -75px;
+}
+
+.circulos>div {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    margin-right: 93px;
+}
+
+.porcentajes {
+    display: block;
+    margin-right: 58px;
+}
+
+.list {
+    display: flex;
+    justify-content: left;
+    margin-left: 302px;
+    margin-top: -46px;
+}
+
+.primero {
+    margin-bottom: 64px;
+    color: grey;
+}
+
+.segundo {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.circulo6 {
+    background: white;
+}
+
+.circulo5,
+.circulo7 {
+    background: rgba(255, 255, 255, 0.9)
+}
+
+.circulo4,
+.circulo8 {
+    background: rgba(255, 255, 255, 0.7)
+}
+
+.circulo3,
+.circulo9 {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.circulo2,
+.circulo10 {
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.circulo1,
+.circulo11 {
+    background: rgba(255, 255, 255, 0.2)
 }

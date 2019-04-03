@@ -1,0 +1,66 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
+
+
+
+.groupCont2{
+fill:none;
+stroke:#fff;
+stroke-miterlimit:10;
+    animation: form1 10s infinite linear;
+    transform-origin: 50% 50%;
+
+}
+
+    @keyframes form1 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+
+</style>
+
+
+<script>
+console.log('test');
+setTimeout(()=> {
+ addRotateTransform('group2', 2, -1);
+
+}, 2000)
+   
+
+  function addRotateTransform(target_id, speed, direction) {
+      var element_to_rotate = document.getElementById(target_id);
+      var my_transform = document.createElementNS("http://www.w3.org/2000/svg", "animateTransform");
+
+      var bb = element_to_rotate.getBBox();
+      var cx = bb.x + bb.width/2;
+      var cy = bb.y + bb.height/2;
+
+      my_transform.setAttributeNS(null, "attributeName", "transform");
+      my_transform.setAttributeNS(null, "type", "rotate");
+      my_transform.setAttributeNS(null, "dur", speed + "s");
+      my_transform.setAttributeNS(null, "repeatCount", "indefinite");
+      my_transform.setAttributeNS(null, "from", "0 "+cx+" "+cy);
+      my_transform.setAttributeNS(null, "to", 360*direction+" "+cx+" "+cy);
+
+      element_to_rotate.appendChild(my_transform);
+      my_transform.beginElement();
+    }
+
+
+
+
+</script>
+
+
+
+</defs><title>f</title>
+<g class="groupCont2" id="groupCont2">
+    <g class="group2" id="group2">
+    <circle class="form2-1" cx="336.36" cy="89.99" r="8.16"/>
+    <circle class="form2-1" cx="339.18" cy="118.58" r="6.2"/>
+    <line class="form2-1" x1="337.26" y1="97.95" x2="338.89" y2="112.25"/>
+</g>
+   </g> 
+    </svg>

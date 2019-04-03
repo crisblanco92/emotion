@@ -1,0 +1,30 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>
+
+
+.project20-1,.project20-2,.project20-3{
+fill:none;
+stroke:#fff;
+stroke-linecap:square;
+stroke-miterlimit:10;
+
+animation: project20 9s infinite linear;
+transform-origin: 50% 50%;
+}
+
+    @keyframes project20 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+}
+
+
+.project20-1{
+stroke-width:2px;
+}
+
+.project20-2{
+stroke-width:0.25px;
+}
+
+
+
+</style></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><path class="project20-1" d="M45.08,25a83.94,83.94,0,0,1,93.6,129.15"/><path class="project20-2" d="M45.08,27.1a81.47,81.47,0,0,1,90.6,127.05"/><path class="project20-3" d="M45.08,29.82a79,79,0,0,1,88.23,124.33"/></svg>

@@ -1,0 +1,45 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200"><defs><style>
+
+
+.project15-1,.project15-3,.project15-4,.project15-6{
+fill:none;
+
+animation: form15 10s infinite linear;
+transform-origin: 50% 50%;
+}
+
+    @keyframes form15 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+.project15-2{
+clip-path:url(#clip-path);
+}
+
+.project15-3,.project15-4{
+stroke:#fff;
+}
+
+.project15-3,.project15-4,.project15-6{
+stroke-miterlimit:10;
+}
+
+.project15-3{
+stroke-dasharray:1.97 1.97;
+}
+
+.project15-5{
+clip-path:url(#clip-path-2);
+}
+
+.project15-6{
+stroke:#c6c6c5;
+stroke-linecap:round;
+stroke-width:0.75px;
+stroke-dasharray:1 6;
+}
+
+
+</style><clipPath id="clip-path"><rect class="project15-1" x="64.56" y="59.11" width="68.4" height="68.4"/></clipPath><clipPath id="clip-path-2"><polygon class="project15-1" points="32.67 -187.44 107.23 -196.22 189.1 -206.45 140.86 -156.74 189.1 -29.55 159.87 -39.78 148.17 -54.08 130.63 -79.26 4.9 -124.58 32.67 -187.44"/></clipPath></defs><title>formas-cuadrado</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><g class="project15-2"><path class="project15-3" d="M65.59,89A33.46,33.46,0,0,1,95.85,60"/><path class="project15-3" d="M103.13,60.14a33.46,33.46,0,0,1,29,30.26"/><path class="project15-3" d="M131.94,97.68a33.47,33.47,0,0,1-30.26,29"/><path class="project15-3" d="M94.4,126.49a33.47,33.47,0,0,1-29-30.26"/><path class="project15-4" d="M65.34,94.77c0-.48,0-1,0-1.46s0-1,0-1.45m34.88,34.88c-.48,0-1,0-1.46,0s-1,0-1.46,0m34.89-34.88c0,.48,0,1,0,1.45s0,1,0,1.46M97.3,59.89c.49,0,1,0,1.46,0s1,0,1.46,0"/></g><g class="project15-5"><line class="project15-6" x1="139.8" y1="25.21" x2="301.81" y2="-198.51"/><line class="project15-6" x1="125.73" y1="22.73" x2="287.74" y2="-201"/><line class="project15-6" x1="111.67" y1="20.24" x2="273.67" y2="-203.48"/><line class="project15-6" x1="97.6" y1="17.76" x2="259.61" y2="-205.97"/><line class="project15-6" x1="83.53" y1="15.27" x2="245.54" y2="-208.46"/><line class="project15-6" x1="69.47" y1="12.78" x2="231.47" y2="-210.94"/><line class="project15-6" x1="55.4" y1="10.3" x2="217.41" y2="-213.43"/><line class="project15-6" x1="41.33" y1="7.81" x2="203.34" y2="-215.91"/><line class="project15-6" x1="27.27" y1="5.33" x2="189.27" y2="-218.4"/><line class="project15-6" x1="13.2" y1="2.84" x2="175.21" y2="-220.89"/><line class="project15-6" x1="-0.87" y1="0.35" x2="161.14" y2="-223.37"/></g></svg>

@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 	  constructor(props){
       super(props)
       this.state = {
-        
+
       }
 	    this.service = new AuthService()
 	  }
@@ -20,6 +20,7 @@ import React, { Component } from 'react'
       this.showShareComponent()
     }
     
+  
 
 	  render(){
       console.log('he clickado en submit')

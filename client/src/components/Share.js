@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import AuthService from './Auth/AuthService'
 import Modal from 'react-modal'
-import FinalForm from '../components/FinalForm'
-
+import FinalForm from './FinalForm';
 
 const customStyles = {
 	content: {
@@ -16,14 +15,15 @@ const customStyles = {
 	}
 }
 
-
 export default class Share extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
       allFormsFromAllUsers: undefined,
-      filteredForms: undefined
+      filteredForms: undefined,
+      modalIsOpen: false,
+      showFinalForm: false,
     }
     this.service = new AuthService()
   }
@@ -46,8 +46,9 @@ export default class Share extends Component {
   };
 
 
-  showFinalForm = () => {
-    this.setState({ modalIsOpen: true, showFinalForm: true });
+
+  openModal = (test) => {
+    this.setState({ selectedTest: test, modalIsOpen: true, showFinalForm: true });
   
   }
   
@@ -174,29 +175,18 @@ export default class Share extends Component {
         {this.state.filteredForms !== undefined && (
           <div class="circulos-container">
             
-                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
-								    {this.state.showFinalForm ? <FinalForm setUser={this.setTheUser} getUser={this.getUser}/> : <Share getUser={this.setTheUser} />}
-								    </Modal>
-                    
                   {this.state.filteredForms.map(user => 
                     <div className="cada-circulo circulo6">
-                    <button onClick={(e) => this.showFinalForm(this.state.openModal)}></button>
+                    <button onClick={() => this.openModal(user.test)}></button>
                     </div>)}
 
+                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
+								    {this.state.showFinalForm && <FinalForm setUser={this.setTheUser} getUser={this.getUser} test={this.state.selectedTest}/> }
+								
+							    </Modal>
 
-                  {this.state.concepts.map(concept => 
-                    <div className="form-in-modal">
-
-
-                      <img src={concept.imageURL}></img>
-                    </div>)}
         </div>)}
           
-
-
-        {/* {this.state.filteredForms !== undefined && (<img src={this.state.filteredForms[0].test.concepts[0].imageURL}></img>)} */}
-
-
       </section>
     )
   }

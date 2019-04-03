@@ -22,21 +22,10 @@ import React, { Component } from 'react'
     
 
 	  render(){
-      console.log('he clickado en submit')
+      console.log(this.props.test)
 	    return(
 	      <div className="sharingwindow-container">
-	        <h3 className="results">Your results will be shared for a global view</h3>
-
-	        <form onSubmit={this.props.handleSubmit} className="sharing-form">
-					
-          <a>
-             <Link to='/share' className="btn-sharing">Submit</Link>
-          </a>
-          <a>
-             <Link to='/' className="no" >No</Link>
-          </a>
-	
-	        </form>
+	      
 	      </div>
 	    )
 	  }

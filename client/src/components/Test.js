@@ -134,7 +134,6 @@ closeModal = () => {
             <React.Fragment>
               <div className="botones-test">
               <button className="btn-respuesta1" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1.name}</button>
-            
               <button className="btn-respuesta2" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2.name}</button>
               </div>
             </React.Fragment>

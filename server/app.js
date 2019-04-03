@@ -45,6 +45,8 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.use(session({
     secret: "hola",
     resave: true,
@@ -60,5 +62,10 @@ app.use('/api', authRoutes)
 const conceptRoutes = require('./routes/concept-routes')
 app.use('/api', conceptRoutes)
 
+
+app.use((req, res, next) => {
+    // If no routes match, send them the React HTML.
+    res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app

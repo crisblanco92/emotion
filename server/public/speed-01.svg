@@ -1,0 +1,25 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.83 160.83"><defs><style>
+
+.speed1-1{
+
+fill:none;
+stroke:#fff;
+stroke-miterlimit:10;
+stroke-width:0.5px;
+}
+
+.speed1-2{
+fill:#fff;
+
+animation: speed1 12s infinite linear;
+transform-origin: 50% 50%;
+}
+
+@keyframes speed1 {
+from {transform: rotate(0deg)}
+to {transform: rotate(360deg)}  
+
+}
+
+
+</style></defs><title>speed</title><circle class="speed1-1" cx="79.65" cy="82.22" r="61.26"/><circle class="speed1-2" cx="112.15" cy="30.72" r="5.7"/></svg>

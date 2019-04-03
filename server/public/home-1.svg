@@ -1,0 +1,25 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>
+
+
+.home-1{
+fill:none;
+stroke:#fff;
+stroke-miterlimit:10;
+stroke-width:0.5px;
+
+    animation: form9 10s infinite linear;
+    transform-origin: 40% 35%;
+
+}
+
+    @keyframes form9 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+
+
+
+
+</style></defs><title>pantallas</title><rect x="0.5" y="0.5" width="199" height="199"/><path d="M199,1V199H1V1H199m1-1H0V200H200V0Z"/><path class="home-1" d="M98,95.69s-8.55-16.24-24.61-6-9.56,27.48-7.06,29c0,0,10.48,19.7,33.72,7.78s8.35-38.31,8.35-38.31S93,60.41,64.49,77.44c-32.9,19.63-11.35,50.79-11.35,50.79s21.88,35.42,57.64,13,19.6-60.39,15.87-66.35C120,64.31,95.79,31.88,50.4,58,7.94,82.47,19.23,131.09,29.56,145.34c12.81,17.66,44.43,55.4,100.17,22,69-41.3,26.74-114.1,26.74-114.1"/></svg>

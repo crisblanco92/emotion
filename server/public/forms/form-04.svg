@@ -1,0 +1,23 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
+
+
+.form4-1 { 
+fill:#fff;
+opacity:0.5;
+
+
+animation: heartbeat 1s alternate infinite;
+transform-origin: 50% 50%;
+}
+
+@keyframes heartbeat {
+  to {
+
+    transform:  scaleX(1.2) scaleY(1.2) rotate(-45deg);
+  }
+}
+</style>
+
+
+
+</defs><title>form</title><circle class="form4-1" cx="255.12" cy="144.57" r="32.18"/></svg>

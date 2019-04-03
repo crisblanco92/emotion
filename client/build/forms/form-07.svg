@@ -1,0 +1,29 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510.24 289.13"><defs><style>
+
+
+.form7-1{
+fill:none;
+stroke:#fff;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-width:0.75px;
+stroke-dasharray:1 5;
+
+
+animation: form3 10s infinite linear;
+transform-origin: 50% 50%;
+}
+
+    @keyframes form3 {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}  
+
+}
+
+
+
+
+
+</style>
+
+</defs><title>pantallas</title><polyline class="form7-1" points="411.81 130.85 254.43 143.39 322.49 284.9"/></svg>

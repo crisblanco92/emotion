@@ -8,12 +8,17 @@ const userSchema = new Schema({
     age: String,
     location: String,
     test: {
-        concepts: [{type:Schema.Types.ObjectId, ref: "Concepts"}],
+        concepts: [{ type: Schema.Types.ObjectId, ref: "Concepts" }],
         velocity: {
-            rational: Number, 
+            rational: Number,
             emotional: Number
+        },
+        percentage: {
+            rationalCounter: Number,
+            emotionalCounter: Number
         }
     }
+
 }, {
     timestamps: true
 });

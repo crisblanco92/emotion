@@ -53,9 +53,13 @@ authRoutes.post('/signup', (req, res, next) => {
                 res.status(400).json({ message: 'Saving user to database went wrong.' })
                 return
             }
+
+
             console.log('NO HAY PETES')
             res.status(200).json({ message: 'Guay' })
             return;
+
+
 
             // req.login(aNewUser, (err) => {
 

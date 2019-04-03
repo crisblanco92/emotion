@@ -67,13 +67,22 @@ class AuthService {
             .then(response => response.data)
     }
 
-    postAnswers = (arr) => {
+    postAnswers = (arr, emotionalCounter, rationalCounter) => {
         console.log('estoy en el servicio y he recibido esto', arr)
-        return this.service.post('/postAnswers', {arr})
+        return this.service.post('/postAnswers', { arr, emotionalCounter, rationalCounter })
             .then(response => response.data)
-    }  
+    }
 
 
+    share = () => {
+        return this.service.post('/share', {})
+            .then(response => response.data)
+    }
+
+    getFormsUsers = () => {
+        return this.service.post('/getAllForms')
+            .then(response => response.data)
+    }
 }
 
 export default AuthService

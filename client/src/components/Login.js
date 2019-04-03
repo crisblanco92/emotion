@@ -47,10 +47,11 @@ import React, { Component } from 'react'
 					</div>	
 					
 					<input type="submit" value="Login" className="btn-login" />
+						
+						<small>Don't have an account? 
+								<Link to={"/signup"}>Signup</Link>
+						</small>
 	        </form>
-	        {/* <small>Don't have account? 
-	            <Link to={"/signup"}> Signup</Link>
-	        </small> */}
 	      </div>
 	    )
 	  }

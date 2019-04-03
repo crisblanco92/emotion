@@ -26,7 +26,6 @@ export default class Home extends Component {
 
           {this.props.goToTest ? <button className="btn create btn-dark"><Link to='/test'>test</Link></button> : <button onClick={this.props.openModal}  className="btn create btn-dark" >create</button>}
   
-  
       </div>
     )
   }

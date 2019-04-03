@@ -1,26 +1,66 @@
 import React, { Component } from 'react'
 import AuthService from './Auth/AuthService'
+import Modal from 'react-modal'
+import FinalForm from '../components/FinalForm'
+
+
+const customStyles = {
+	content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+			width: '40%'
+	}
+}
+
 
 export default class Share extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      allFormsFromAllUsers: undefined
+      allFormsFromAllUsers: undefined,
+      filteredForms: undefined
     }
     this.service = new AuthService()
   }
 
   componentDidMount() {
     this.service.getFormsUsers()
-    .then(response => this.setState({...this.state, allFormsFromAllUsers: response}))
+      .then(response => this.setState({ ...this.state, allFormsFromAllUsers: response }))
+  }
+
+
+  filterButtons = (rtCounter, emCounter) => {
+
+    let copyAllForms = [...this.state.allFormsFromAllUsers]
+
+    let filteredForms = copyAllForms.filter(user => user.test.percentage.rationalCounter === rtCounter && user.test.percentage.emotionalCounter === emCounter)
+
+    this.setState({ ...this.state, filteredForms })
+
+
+  };
+
+
+  showFinalForm = () => {
+    this.setState({ modalIsOpen: true, showFinalForm: true });
+  
+  }
+  
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
   }
 
 
 
-
-
   render() {
+
+    console.log(this.state.filteredForms)
+
     return (
       <section className="share-container">
         <article className="e-y-r">
@@ -83,50 +123,79 @@ export default class Share extends Component {
             <p className="primero">100</p>
             <p className="segundo">0</p>
           </div>
-   
-        </article>
-      
-      <div className="circulos">
-        <div className="circulo1">
-        <button onClick={()=>console.log(0,100)}></button>
-        </div>
-        <div className="circulo2">
-        <button onClick={()=>console.log(10,90)}></button>
-        </div>
-        <div className="circulo3">
-        <button onClick={()=>console.log(20,80)}></button>
-        </div>
-        <div className="circulo4">
-        <button onClick={()=>console.log(30,70)}></button>
-        </div>
-        <div className="circulo5">
-        <button onClick={()=>console.log(40,60)}></button>
-        </div>
-        <div className="circulo6">
-        <button onClick={()=>console.log(50,50)}></button>
-        </div>
-        <div className="circulo7">
-        <button onClick={()=>console.log(60,40)}></button>
-        </div>
-        <div className="circulo8">
-        <button onClick={()=>console.log(70,30)}></button>
-        </div>
-        <div className="circulo9">
-        <button onClick={()=>console.log(80,20)}></button>
-        </div>
-        <div className="circulo10">
-        <button onClick={()=>console.log(90,10)}></button>
-        </div>
-        <div className="circulo11">
-        <button onClick={()=>console.log(100,0)}></button>
-        </div>
 
-      </div>
+        </article>
+
+        <div className="circulos">
+          <div className="circulo1">
+            <button onClick={() => this.filterButtons(0, 100)}> </button>
+          </div>
+          <div className="circulo2">
+            <button onClick={() => this.filterButtons(10, 90)}></button>
+          </div>
+          <div className="circulo3">
+            <button onClick={() => this.filterButtons(20, 80)}></button>
+          </div>
+          <div className="circulo4">
+            <button onClick={() => this.filterButtons(30, 70)}></button>
+          </div>
+          <div className="circulo5">
+            <button onClick={() => this.filterButtons(40, 60)}></button>
+          </div>
+          <div className="circulo6">
+            <button onClick={() => this.filterButtons(50, 50)}></button>
+          </div>
+          <div className="circulo7">
+            <button onClick={() => this.filterButtons(60, 40)}></button>
+
+
+          </div>
+
+          <div className="circulo8">
+            <button onClick={() => this.filterButtons(70, 30)}></button>
+          </div>
+          <div className="circulo9">
+            <button onClick={() => this.filterButtons(80, 20)}></button>
+          </div>
+          <div className="circulo10">
+            <button onClick={() => this.filterButtons(90, 10)}></button>
+          </div>
+          <div className="circulo11">
+            <button onClick={() => this.filterButtons(1000, 0)}></button>
+          </div>
+
+        </div>
 
 
         <div className="linea"></div>
 
-                          {/* <p className="fin-name">{this.props.userInSession.username}, {this.props.userInSession.age}</p> */}
+
+
+        {this.state.filteredForms !== undefined && (
+          <div class="circulos-container">
+            
+                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
+								    {this.state.showFinalForm ? <FinalForm setUser={this.setTheUser} getUser={this.getUser}/> : <Share getUser={this.setTheUser} />}
+								    </Modal>
+                    
+                  {this.state.filteredForms.map(user => 
+                    <div className="cada-circulo circulo6">
+                    <button onClick={(e) => this.showFinalForm(this.state.openModal)}></button>
+                    </div>)}
+
+
+                  {this.state.concepts.map(concept => 
+                    <div className="form-in-modal">
+
+
+                      <img src={concept.imageURL}></img>
+                    </div>)}
+        </div>)}
+          
+
+
+        {/* {this.state.filteredForms !== undefined && (<img src={this.state.filteredForms[0].test.concepts[0].imageURL}></img>)} */}
+
 
       </section>
     )

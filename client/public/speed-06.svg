@@ -12,7 +12,7 @@ stroke-width:0.5px;
 fill:#fff;
 
 
-animation: speed6 2s infinite linear;
+animation: speed6 4s infinite linear;
 transform-origin: 50% 50%;
 }
 

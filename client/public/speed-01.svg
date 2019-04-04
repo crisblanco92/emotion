@@ -11,7 +11,7 @@ stroke-width:0.5px;
 .speed1-2{
 fill:#fff;
 
-animation: speed1 12s infinite linear;
+animation: speed1 13s infinite linear;
 transform-origin: 50% 50%;
 }
 

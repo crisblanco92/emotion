@@ -33,8 +33,8 @@ export default class Test extends Component {
       
       answersGiven : [],
       answerIndex: 0,
-      rationalCounter : 0,
-      emotionalCounter: 0
+      emotionalCounter: 0,
+      rationalCounter : 0
       //showShareWindow : false
     }
 
@@ -82,25 +82,25 @@ saveTest = () => {
   //console.log(filteredArray)
 
 
-  let rationalCounter = 0
   let emotionalCounter = 0
+  let rationalCounter = 0
 
     this.state.answersGiven.forEach((answer) => {
 
-      if (answer.concept === "rational") {
+      if (answer.concept === "emotional") {
         console.log('resultado de la iteracion', answer.concept)
 
-        rationalCounter += 10
-        console.log('contador rational:', rationalCounter)
-      } else {
         emotionalCounter += 10
         console.log('contador emotional:', emotionalCounter)
+      } else {
+        rationalCounter += 10
+        console.log('contador rational:', rationalCounter)
         }
       
     });
 
 
-  this.service.postAnswers(filteredArray, rationalCounter, emotionalCounter) 
+  this.service.postAnswers(filteredArray, emotionalCounter, rationalCounter) 
   this.setState({
     ...this.state, emotionalCounter , rationalCounter
   })
@@ -134,6 +134,7 @@ closeModal = () => {
             <React.Fragment>
               <div className="botones-test">
               <button className="btn-respuesta1" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept1.name}</button>
+            
               <button className="btn-respuesta2" onClick={(e) => this.accumulateAnswers(this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2)}>{this.state.response[this.state.answerIndex].pairOfConcepts[0].concept2.name}</button>
               </div>
             </React.Fragment>

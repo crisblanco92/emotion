@@ -10,7 +10,7 @@ stroke-width:0.5px;
 .speed4-2{
 fill:#fff;
 
-animation: speed4 6s infinite linear;
+animation: speed4 8s infinite linear;
 transform-origin: 50% 50%;
 }
 

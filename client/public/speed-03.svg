@@ -11,7 +11,7 @@ stroke-width:0.5px;
 fill:#fff;
 
 
-animation: speed3 8s infinite linear;
+animation: speed3 10s infinite linear;
 transform-origin: 50% 50%;
 }
 

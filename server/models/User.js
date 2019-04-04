@@ -14,8 +14,8 @@ const userSchema = new Schema({
             emotional: Number
         },
         percentage: {
-            rationalCounter: Number,
-            emotionalCounter: Number
+            emotionalCounter: Number,
+            rationalCounter: Number
         }
     }
 

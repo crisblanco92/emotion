@@ -3,15 +3,14 @@ import AuthService from './Auth/AuthService'
 import Modal from 'react-modal'
 import FinalForm from './FinalForm';
 
-const customStyles = {
+const customStyles2 = {
 	content: {
-			top: '50%',
-			left: '50%',
+      top: '0',
+      left: '0',
 			right: 'auto',
-			bottom: 'auto',
-			marginRight: '-50%',
-			transform: 'translate(-50%, -50%)',
-			width: '40%'
+      bottom: 'auto',
+      width: '80vw',
+      height: '80vh'
 	}
 }
 
@@ -34,11 +33,11 @@ export default class Share extends Component {
   }
 
 
-  filterButtons = (rtCounter, emCounter) => {
+  filterButtons = (emCounter, rtCounter) => {
 
     let copyAllForms = [...this.state.allFormsFromAllUsers]
 
-    let filteredForms = copyAllForms.filter(user => user.test.percentage.rationalCounter === rtCounter && user.test.percentage.emotionalCounter === emCounter)
+    let filteredForms = copyAllForms.filter(user => user.test.percentage.emotionalCounter === emCounter && user.test.percentage.rationalCounter === rtCounter)
 
     this.setState({ ...this.state, filteredForms })
 
@@ -47,8 +46,8 @@ export default class Share extends Component {
 
 
 
-  openModal = (test) => {
-    this.setState({ selectedTest: test, modalIsOpen: true, showFinalForm: true });
+  openModal = (user) => {
+    this.setState({ selectedUser: user, modalIsOpen: true, showFinalForm: true });
   
   }
   
@@ -61,7 +60,7 @@ export default class Share extends Component {
   render() {
 
     console.log(this.state.filteredForms)
-
+    console.log(this.props)
     return (
       <section className="share-container">
         <article className="e-y-r">
@@ -162,7 +161,7 @@ export default class Share extends Component {
             <button onClick={() => this.filterButtons(90, 10)}></button>
           </div>
           <div className="circulo11">
-            <button onClick={() => this.filterButtons(1000, 0)}></button>
+            <button onClick={() => this.filterButtons(100, 0)}></button>
           </div>
 
         </div>
@@ -176,12 +175,12 @@ export default class Share extends Component {
           <div class="circulos-container">
             
                   {this.state.filteredForms.map(user => 
-                    <div className="cada-circulo circulo6">
-                    <button onClick={() => this.openModal(user.test)}></button>
+                    <div className="cada-circulo circulo4">
+                    <button onClick={() => this.openModal(user)}></button>
                     </div>)}
 
-                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
-								    {this.state.showFinalForm && <FinalForm setUser={this.setTheUser} getUser={this.getUser} test={this.state.selectedTest}/> }
+                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles2}>
+								    {this.state.showFinalForm && <FinalForm setUser={this.setTheUser} getUser={this.getUser} user={this.state.selectedUser}/> }
 								
 							    </Modal>
 

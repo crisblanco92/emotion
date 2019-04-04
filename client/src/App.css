@@ -680,8 +680,55 @@ h3 {
     margin: 70px auto 0 auto;
 }
 
-.cada-circulo {
-    border-radius: 50px;
-    width: 20px;
-    height: 20px;
+.cada-circulo>button {
+    border-radius: 50px !important;
+    width: 30px;
+    height: 30px;
+}
+
+.finalresult-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-in-modal {
+    top: 0;
+    left: 0;
+}
+
+
+/* .ReactModal__Content--after-open {
+    overflow: hidden !important;
+} */
+
+.final-name {
+    z-index: 9999;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.final-loc {
+    z-index: 9999;
+    color: white;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+}
+
+.final-emo {
+    z-index: 9999;
+    color: grey;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+}
+
+.final-rat {
+    z-index: 9999;
+    color: grey;
+    position: absolute;
+    top: 59%;
+    left: 50%;
 }

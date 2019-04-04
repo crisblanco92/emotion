@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 import AuthService from './Auth/AuthService'
-import Signup from '../components/Signup'
-import Share from '../components/Share'
 import Modal from 'react-modal'
 import Home from '../components/Home'
 import SharingWindow from './SharingWindow';
@@ -18,7 +16,8 @@ const customStyles = {
 			bottom: 'auto',
 			marginRight: '-50%',
 			transform: 'translate(-50%, -50%)',
-			width: '40%'
+      width: '40%',
+      backgroundColor: 'black'
 	}
 }
 
@@ -101,6 +100,7 @@ saveTest = () => {
 
 
   this.service.postAnswers(filteredArray, emotionalCounter, rationalCounter) 
+
   this.setState({
     ...this.state, emotionalCounter , rationalCounter
   })
@@ -123,11 +123,10 @@ closeModal = () => {
     
     render() {
       
-      console.log(this.state.answersGiven)
       if (this.state.response) {
       //console.log(this.state.response)
       return (
-        <div className="Test">
+        <div className="Test fadeIn">
           <h1></h1>
 
           {this.state.answerIndex < 10 ?  
@@ -139,10 +138,10 @@ closeModal = () => {
               </div>
             </React.Fragment>
        : 
-            <div>
+            <div className ="img-selected-container fadeIn">
               {this.state.answersGiven.map(answer => (
                 <React.Fragment>
-                  <img src={answer.imageURL} className="img-selected" />
+                  <img src={answer.imageURL} className="img-selected"/>
                  
 
 

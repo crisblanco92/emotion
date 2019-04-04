@@ -68,7 +68,7 @@ class AuthService {
     }
 
     postAnswers = (arr, emotionalCounter, rationalCounter) => {
-        console.log('estoy en el servicio y he recibido esto', arr)
+        //console.log('estoy en el servicio y he recibido esto', arr)
         return this.service.post('/postAnswers', { arr, emotionalCounter, rationalCounter })
             .then(response => response.data)
     }
@@ -81,6 +81,21 @@ class AuthService {
 
     getFormsUsers = () => {
         return this.service.post('/getAllForms')
+            .then(response => response.data)
+    }
+
+
+
+
+    getUserForFinalResult = () => {
+        return this.service.post('/getUserForFinalResult')
+            .then(response => response.data)
+    }
+
+
+
+    myResult = () => {
+        return this.service.post('/myresult', {})
             .then(response => response.data)
     }
 }

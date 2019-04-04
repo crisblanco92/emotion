@@ -7,7 +7,7 @@ stroke-miterlimit:10;
 stroke-width:0.5px;
 
  animation: project10 10s infinite linear;
-    transform-origin: 40% 35%;
+    transform-origin: 50% 50%;
 }
 
   @keyframes project10 {

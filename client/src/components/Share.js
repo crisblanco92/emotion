@@ -5,12 +5,15 @@ import FinalForm from './FinalForm';
 
 const customStyles2 = {
 	content: {
-      top: '0',
+      top: '-6%',
       left: '0',
 			right: 'auto',
       bottom: 'auto',
-      width: '80vw',
-      height: '80vh'
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      padding: '0',
+      backgroundColor: 'black',
 	}
 }
 
@@ -179,8 +182,9 @@ export default class Share extends Component {
                     <button onClick={() => this.openModal(user)}></button>
                     </div>)}
 
-                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles2}>
-								    {this.state.showFinalForm && <FinalForm setUser={this.setTheUser} getUser={this.getUser} user={this.state.selectedUser}/> }
+                    <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles2}>  
+                    <button className="close-btn" onClick={() => this.closeModal()}>X</button>
+								    {this.state.showFinalForm && <FinalForm setUser={this.setTheUser} getUser={this.getUser} user={this.state.selectedUser} /> }
 								
 							    </Modal>
 

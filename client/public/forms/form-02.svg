@@ -6,6 +6,8 @@
 fill:none;
 stroke:#fff;
 stroke-miterlimit:10;
+
+
     animation: form1 10s infinite linear;
     transform-origin: 50% 50%;
 

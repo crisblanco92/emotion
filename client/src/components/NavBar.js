@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import AuthService from './Auth/AuthService'
 
-
 class NavBar extends Component {
 
     constructor(props) {
@@ -56,8 +55,12 @@ class NavBar extends Component {
                             <Link to='/theproject' className="selected">THE PROJECT</Link>
                         </a>
                   
+                  
                 </div>
-                <div className="nav-right">
+                <div className="nav-right">              
+                        <a>
+                            <Link to='/myresult' className="selected">MY TEST</Link>
+                        </a>
                         <a>
                           <Link to='/'>
                                 <button className="login-btn" onClick={() => this.logoutUser()}>LOG OUT</button>

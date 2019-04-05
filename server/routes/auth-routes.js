@@ -56,20 +56,20 @@ authRoutes.post('/signup', (req, res, next) => {
 
 
             console.log('NO HAY PETES')
-            res.status(200).json({ message: 'Guay' })
-            return;
+                // res.status(200).json(aNewUser)
+                // return;
 
 
 
-            // req.login(aNewUser, (err) => {
+            req.login(aNewUser, (err) => {
 
-            //     if (err) {
-            //         res.status(500).json({ message: 'Login after signup went bad.' })
-            //         return
-            //     }
+                if (err) {
+                    res.status(500).json({ message: 'Login after signup went bad.' })
+                    return
+                }
 
-            //     res.status(200).json(aNewUser)
-            // })
+                res.status(200).json(aNewUser)
+            })
         })
     })
 

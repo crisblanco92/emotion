@@ -25,7 +25,7 @@ export default class Home extends Component {
           <img src="/public/home-2.svg" srcset="home-2.svg" className="main-image2"/>
           <img src="/public/home-3.svg" srcset="home-3.svg" className="main-image3"/>
 
-          {this.props.goToTest ? <button className="create"><Link to='/test'>test</Link></button> : <button onClick={this.props.openModal}  className="create" >create</button>}
+          {this.props.goToTest ? <button className="create home"><Link to='/test'>test</Link></button> : <button onClick={this.props.openModal}  className="create" >create</button>}
   
   
           {/* {this.props.goToTest ? <button className="create" render = {() => <Test/>}>test</button> : <button onClick={this.props.openModal}  className="create" >create</button>} */}

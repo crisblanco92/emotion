@@ -26,6 +26,15 @@ a {
     padding: 10px 20px;
 }
 
+.create.home {
+    padding: 0;
+}
+
+.create.home a {
+    display: block;
+    padding: 10px 20px;
+}
+
 .create a {
     text-decoration: none;
     color: black;
@@ -598,16 +607,6 @@ h3 {
     border-bottom: 1px solid grey;
 }
 
-.no a {
-    text-decoration: none;
-    color: grey;
-}
-
-.no a:hover {
-    color: white !important;
-    text-decoration: none !important;
-}
-
 
 /* --------------------------- SHARE --------------------------- */
 
@@ -810,4 +809,13 @@ h3 {
 .close-btn:hover {
     color: grey;
     transition: 0.3s ease-in-out;
+}
+
+.sharing-form a {
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.sharing-form a:hover {
+    color: white;
 }

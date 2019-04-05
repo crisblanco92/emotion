@@ -38,7 +38,7 @@ router.post('/postAnswers', (req, res, next) => {
 })
 
 router.post('/getAllForms', (req, res) => {
-    User.find()
+    User.find({ 'test.percentage': { $ne: null } })
         .populate('test.concepts')
         .then(user => res.json(user))
 })
